@@ -24,7 +24,7 @@ const GALLERY_PHOTOS: GalleryPhoto[] = [
     title: 'Master Karigar Spreading Dosa on Cast Iron',
     category: 'Craft',
     likes: 418,
-    image: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80',
+    image: '/images/crispy-masala-dosa.jpg',
     aspect: 'aspect-square',
   },
   {
@@ -40,7 +40,7 @@ const GALLERY_PHOTOS: GalleryPhoto[] = [
     title: 'Fresh Coconut Chutney Tempered with Mustard & Curry Leaves',
     category: 'Ingredients',
     likes: 189,
-    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80',
+    image: '/images/hero-dosa-feast.jpg',
     aspect: 'aspect-[3/4]',
   },
   {
@@ -48,7 +48,7 @@ const GALLERY_PHOTOS: GalleryPhoto[] = [
     title: 'Gunpowder Podi Ghee Thatte Idlis',
     category: 'Signatures',
     likes: 520,
-    image: 'https://images.unsplash.com/photo-1505253758473-96b3015f27eb?auto=format&fit=crop&w=800&q=80',
+    image: '/images/steamed-idli-sambar.jpg',
     aspect: 'aspect-square',
   },
   {

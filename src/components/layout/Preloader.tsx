@@ -99,17 +99,25 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
           </svg>
         </div>
 
-        {/* Wordmark */}
-        <h1 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[0.25em] text-cream mb-2">
-          CAUVERY
-        </h1>
-
-        <div className="flex items-center gap-3 w-full justify-center mb-6">
-          <div className="h-[1px] w-8 bg-gold/60" />
-          <span className="text-[11px] uppercase tracking-[0.3em] font-medium text-gold">
-            The Art of Dosa & Idli
+        {/* Wordmark with Sprouting Foliage */}
+        <div className="relative flex items-center justify-center mb-2">
+          <span className="font-display text-3xl sm:text-4xl font-black tracking-[0.2em] text-cream leading-none">
+            CAUVER
           </span>
-          <div className="h-[1px] w-8 bg-gold/60" />
+          <span className="relative font-display text-3xl sm:text-4xl font-black text-cream leading-none">
+            Y
+            <span className="absolute -top-2 -right-3 text-xs text-gold animate-bounce">✦</span>
+          </span>
+        </div>
+
+        <div className="flex items-center gap-2.5 w-full justify-center mb-6">
+          <span className="text-[11px] text-emerald-400">🌿</span>
+          <div className="h-[1.5px] w-8 bg-gradient-to-r from-transparent to-gold" />
+          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-extrabold text-gold-light whitespace-nowrap">
+            The Art of Dosa &amp; Idli
+          </span>
+          <div className="h-[1.5px] w-8 bg-gradient-to-r from-gold to-transparent" />
+          <span className="text-[11px] text-emerald-400">🌿</span>
         </div>
 
         {/* Progress & Micro copy */}

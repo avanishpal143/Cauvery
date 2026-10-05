@@ -1,0 +1,372 @@
+{
+  "categories": [
+    { "id": "all", "name": "All Delicacies", "icon": "sparkles" },
+    { "id": "dosa", "name": "Artisanal Dosas", "icon": "utensils" },
+    { "id": "idli", "name": "Steamed Idlis", "icon": "disc" },
+    { "id": "uttapam", "name": "Thick Uttapams", "icon": "layers" },
+    { "id": "rice", "name": "Rice & Meals", "icon": "soup" },
+    { "id": "beverages", "name": "Filter Kaapi & Drinks", "icon": "coffee" },
+    { "id": "desserts", "name": "Traditional Desserts", "icon": "heart" }
+  ],
+  "items": [
+    {
+      "id": "masala-dosa",
+      "name": "Classic Golden Masala Dosa",
+      "category": "dosa",
+      "price": 120,
+      "rating": 4.9,
+      "bestseller": true,
+      "spiciness": 1,
+      "isJain": true,
+      "description": "Crisp golden crepe roasted in pure ghee, spread with spiced potato aloo palya, served with coconut chutney, tomato chutney & hot drumstick sambar.",
+      "calories": "340 kcal",
+      "prepTime": "8 mins",
+      "tags": ["Pure Ghee", "Signature", "Classic"],
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "mysore-masala",
+      "name": "Cauvery Mysore Masala Dosa",
+      "category": "dosa",
+      "price": 140,
+      "rating": 5.0,
+      "bestseller": true,
+      "spiciness": 3,
+      "isJain": false,
+      "description": "Layered with our fiery red garlic-chilli chutney, dollop of yellow butter, spiced potato mash, roasted till deep burgundy crunch.",
+      "calories": "395 kcal",
+      "prepTime": "10 mins",
+      "tags": ["Chef's Special", "Fiery", "Bestseller"],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "paper-roast",
+      "name": "Ghee Paper Roast Dosa",
+      "category": "dosa",
+      "price": 160,
+      "rating": 4.8,
+      "bestseller": true,
+      "spiciness": 0,
+      "isJain": true,
+      "description": "2.5-feet ultra-thin wafer roll crisped with aromatic pure cow ghee. Light as parchment with a buttery caramel finish.",
+      "calories": "320 kcal",
+      "prepTime": "10 mins",
+      "tags": ["Extra Crispy", "Feather-light", "Family Favorite"],
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "rava-onion-dosa",
+      "name": "Crispy Rava Onion Masala Dosa",
+      "category": "dosa",
+      "price": 150,
+      "rating": 4.7,
+      "spiciness": 2,
+      "isJain": false,
+      "description": "Semolina batter infused with whole peppercorns, crushed cumin, green chillies, and caramelized shallots.",
+      "calories": "380 kcal",
+      "prepTime": "12 mins",
+      "tags": ["Crunchy", "Peppercorn Note"],
+      "image": "https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cheese-chilli-dosa",
+      "name": "Melted Cheese & Green Chilli Dosa",
+      "category": "dosa",
+      "price": 170,
+      "rating": 4.8,
+      "spiciness": 2,
+      "isJain": true,
+      "description": "Fusion delight stuffed with aged cheddar, chopped coriander, spiced chillies, and melted butter.",
+      "calories": "440 kcal",
+      "prepTime": "9 mins",
+      "tags": ["Cheese Pull", "College Favorite"],
+      "image": "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "steamed-idli-pair",
+      "name": "Malli Poo Steamed Idli (2 Pcs)",
+      "category": "idli",
+      "price": 60,
+      "rating": 4.9,
+      "bestseller": false,
+      "spiciness": 0,
+      "isJain": true,
+      "description": "Jasmine-flower soft idlis fermented for 24 hours in stone wet-grinders. Steamed fresh every 15 minutes.",
+      "calories": "160 kcal",
+      "prepTime": "4 mins",
+      "tags": ["Jasmine Soft", "Healthy", "Zero Oil"],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "ghee-podi-idli",
+      "name": "Gunpowder Ghee Podi Thatte Idli",
+      "category": "idli",
+      "price": 110,
+      "rating": 5.0,
+      "bestseller": true,
+      "spiciness": 3,
+      "isJain": true,
+      "description": "Fluffy plate idli bathed in bubbling desi ghee and generously encrusted with roasted lentils podi gunpowder.",
+      "calories": "290 kcal",
+      "prepTime": "6 mins",
+      "tags": ["Desi Ghee", "Gunpowder", "Addictive"],
+      "image": "https://images.unsplash.com/photo-1505253758473-96b3015f27eb?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "sambar-dipped-idli",
+      "name": "Dipped Sambar Mini Idlis (14 Pcs)",
+      "category": "idli",
+      "price": 95,
+      "rating": 4.8,
+      "spiciness": 2,
+      "isJain": true,
+      "description": "Button idlis submerged in piping hot spiced shallot sambar, garnished with freshly chopped coriander and ghee drizzle.",
+      "calories": "240 kcal",
+      "prepTime": "5 mins",
+      "tags": ["Soul Warming", "Sambar Soaked"],
+      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "medu-vada-pair",
+      "name": "Crispy Golden Medu Vada (2 Pcs)",
+      "category": "idli",
+      "price": 80,
+      "rating": 4.9,
+      "spiciness": 1,
+      "isJain": false,
+      "description": "Fresh urad dal donuts fried to crackling exterior and sponge interior with whole black peppers and ginger.",
+      "calories": "260 kcal",
+      "prepTime": "5 mins",
+      "tags": ["Crunchy", "High Protein"],
+      "image": "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "onion-tomato-uttapam",
+      "name": "Thick Onion Tomato Chilli Uttapam",
+      "category": "uttapam",
+      "price": 130,
+      "rating": 4.7,
+      "spiciness": 2,
+      "isJain": false,
+      "description": "Thick soft sourdough pancake studded with sweet red onions, ripe tomatoes, green chillies and fresh curry leaves.",
+      "calories": "310 kcal",
+      "prepTime": "11 mins",
+      "tags": ["Fluffy Base", "Fresh Farm Veggies"],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "podi-paneer-uttapam",
+      "name": "Roasted Podi Paneer Uttapam",
+      "category": "uttapam",
+      "price": 165,
+      "rating": 4.9,
+      "spiciness": 2,
+      "isJain": true,
+      "description": "Cast-iron skillet pancake generously topped with malai paneer cubes, ghee, and Cauvery house podi.",
+      "calories": "410 kcal",
+      "prepTime": "12 mins",
+      "tags": ["Rich Paneer", "High Protein"],
+      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "bisi-bele-bath",
+      "name": "Royal Mysore Bisi Bele Bath",
+      "category": "rice",
+      "price": 140,
+      "rating": 4.9,
+      "bestseller": true,
+      "spiciness": 2,
+      "isJain": true,
+      "description": "Slow-cooked rice, lentils, and mixed country vegetables simmered with 18-spice blend, tamarind, and desi ghee cashew tadka. Served with boondi.",
+      "calories": "430 kcal",
+      "prepTime": "7 mins",
+      "tags": ["Karnataka Heritage", "Pure Comfort"],
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "curd-rice-tadka",
+      "name": "Temple Style Curd Rice (Bagala Bath)",
+      "category": "rice",
+      "price": 110,
+      "rating": 4.8,
+      "spiciness": 1,
+      "isJain": true,
+      "description": "Silky homemade yogurt rice tempered with mustard seeds, curry leaves, ginger, pomegranate pearls and crispy urad dal.",
+      "calories": "280 kcal",
+      "prepTime": "4 mins",
+      "tags": ["Cooling", "Probiotic", "Temple Recipe"],
+      "image": "https://images.unsplash.com/photo-1505253758473-96b3015f27eb?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "cauvery-special-thali",
+      "name": "Cauvery Royal Mini Feast",
+      "category": "rice",
+      "price": 220,
+      "rating": 5.0,
+      "bestseller": true,
+      "spiciness": 2,
+      "isJain": true,
+      "description": "1 Mini Masala Dosa, 1 Steamed Idli, 1 Crispy Vada, Bisi Bele Bath, Curd Rice, Kesari Bath, 3 Chutneys, Sambar & Filter Coffee.",
+      "calories": "680 kcal",
+      "prepTime": "12 mins",
+      "tags": ["All-In-One", "Best Value", "Grand Platter"],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "degree-filter-coffee",
+      "name": "Cauvery Kumbakonam Degree Filter Kaapi",
+      "category": "beverages",
+      "price": 50,
+      "rating": 5.0,
+      "bestseller": true,
+      "spiciness": 0,
+      "isJain": true,
+      "description": "Freshly brewed 85:15 Arabica-chicory decoction frothed high with whole dairy milk, served steaming in traditional brass davara tumbler.",
+      "calories": "110 kcal",
+      "prepTime": "3 mins",
+      "tags": ["Brass Davara", "Aromatic", "Must Try"],
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "jaggery-ginger-tea",
+      "name": "Nilgiri Masala Sukku Chai (Jaggery)",
+      "category": "beverages",
+      "price": 45,
+      "rating": 4.7,
+      "spiciness": 1,
+      "isJain": true,
+      "description": "Nilgiri black tea brewed with dry ginger (sukku), cardamom, and sweetened naturally with organic palm jaggery.",
+      "calories": "85 kcal",
+      "prepTime": "4 mins",
+      "tags": ["No Refined Sugar", "Immunity Booster"],
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "masala-buttermilk",
+      "name": "Spiced Moru (Cauvery Majjige)",
+      "category": "beverages",
+      "price": 40,
+      "rating": 4.8,
+      "spiciness": 1,
+      "isJain": true,
+      "description": "Refreshing churned chaas spiked with ginger, crushed green chillies, asafoetida, fresh coriander and rock salt.",
+      "calories": "55 kcal",
+      "prepTime": "2 mins",
+      "tags": ["Cooling", "Digestive", "Summer Special"],
+      "image": "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "kesari-bath",
+      "name": "Ghee Pineapple Kesari Bath",
+      "category": "desserts",
+      "price": 75,
+      "rating": 4.9,
+      "bestseller": false,
+      "spiciness": 0,
+      "isJain": true,
+      "description": "Semolina pudding roasted in pure Nandini ghee, infused with fresh pineapple pulp, saffron strands, and roasted cashews.",
+      "calories": "260 kcal",
+      "prepTime": "4 mins",
+      "tags": ["Pure Ghee", "Saffron Aroma", "Sweet Melt"],
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "mysore-pak",
+      "name": "Warm Melty Mysore Pak",
+      "category": "desserts",
+      "price": 60,
+      "rating": 5.0,
+      "bestseller": true,
+      "spiciness": 0,
+      "isJain": true,
+      "description": "Gram flour and bubbling ghee confectionery that dissolves on the tongue with rich caramelized fudge undertones.",
+      "calories": "310 kcal",
+      "prepTime": "2 mins",
+      "tags": ["Melt in Mouth", "Royal Sweet"],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "offers": [
+    {
+      "id": "student-offer",
+      "title": "College Special (IIBM & PCMC)",
+      "badge": "15% OFF",
+      "code": "CAUVERYSTUDENT",
+      "description": "Show your valid college student ID card and get flat 15% off on bill above ₹200. Valid Mon - Fri till 6 PM."
+    },
+    {
+      "id": "combo-day",
+      "title": "Cauvery Breakfast Power Combo",
+      "badge": "ONLY ₹199",
+      "code": "COMBO199",
+      "description": "1 Mysore Masala Dosa + 1 Ghee Podi Thatte Idli + 1 Kumbakonam Degree Filter Kaapi (Save ₹100!)."
+    },
+    {
+      "id": "family-weekend",
+      "title": "Weekend Family Platter",
+      "badge": "FREE KAAPI",
+      "code": "FAMILYFEST",
+      "description": "Order any 3 Special Dosas and get 2 Traditional Filter Kaapis on the house!"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Where exactly is Cauvery located?",
+      "a": "We are located at Bansal Avenue, Shop No. 8, Gat No. 1624, Near IIBM College, Opposite Chikli Town Hall, Pimpri Chinchwad, Pune - 411062."
+    },
+    {
+      "q": "Do you serve 100% pure vegetarian & Jain options?",
+      "a": "Yes! Cauvery is strictly 100% Pure Vegetarian. We offer dedicated Jain preparation (no onion, no garlic, no root vegetables) for all our idlis, plain & cheese dosas, and chutneys."
+    },
+    {
+      "q": "What are your operating timings?",
+      "a": "We are open 7 days a week from 7:00 AM in the morning to 11:00 PM at night. Hot breakfast, lunch meals, evening snacks, and late dinners are available throughout the day."
+    },
+    {
+      "q": "Is parking available for cars and two-wheelers?",
+      "a": "Yes, ample customer parking is available right in front of Bansal Avenue and opposite Chikli Town Hall."
+    },
+    {
+      "q": "How can I order online or book a table?",
+      "a": "You can assemble your dishes directly using our one-click WhatsApp Cart on this website, or call us directly. Table reservations for families and groups can be booked seamlessly via the booking form."
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Dr. Rohit Deshmukh",
+      "role": "Local Resident, Nigdi",
+      "rating": 5,
+      "date": "Yesterday",
+      "review": "Hands down the best Mysore Masala Dosa in Pimpri Chinchwad! The crispness of the dosa and that fiery red garlic chutney reminds me of CTR Bangalore. The brass davara filter coffee was heavenly.",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Sneha Kulkarni",
+      "role": "IIBM College Student",
+      "rating": 5,
+      "date": "3 days ago",
+      "review": "As students right next door at IIBM, Cauvery is our daily hangout. The Ghee Podi Thatte Idli melts in your mouth and the student discount is a lifesaver. Fast service and super hygienic!",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Anand & Priya Iyer",
+      "role": "Food Bloggers Pune",
+      "rating": 5,
+      "date": "1 week ago",
+      "review": "Being authentic Tamilians living in Pune, we are very picky about sambar and filter coffee. Cauvery's sambar is aromatic without unnecessary sugar, and the coconut chutney is ground fresh. 10/10 experience!",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Vikram Shinde",
+      "role": "IT Professional, Hinjawadi",
+      "rating": 5,
+      "date": "2 weeks ago",
+      "review": "Drove from Hinjawadi on Sunday just for their 2.5-foot Paper Roast Dosa. Totally worth the drive! The ambience is warm and modern, not cramped like typical tiffin joints.",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80"
+    }
+  ]
+}

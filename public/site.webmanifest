@@ -1,0 +1,17 @@
+{
+  "name": "Cauvery – The Art of Dosa & Idli",
+  "short_name": "Cauvery Cafe",
+  "description": "Award-winning pure-veg South Indian cafe in Pimpri Chinchwad, Pune. Serving artisanal crispy dosas, cloud-soft idlis, and authentic degree filter coffee.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF5E8",
+  "theme_color": "#0F2E1D",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

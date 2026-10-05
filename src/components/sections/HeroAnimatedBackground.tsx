@@ -3,10 +3,10 @@ import React from 'react';
 export const HeroAnimatedBackground: React.FC = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
-      {/* 1. Warm Golden & Botanical Ambient Radial Gradients */}
-      <div className="absolute top-12 left-1/4 w-[36rem] h-[36rem] bg-emerald-500/10 dark:bg-emerald-600/12 rounded-full blur-[110px] animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute bottom-10 right-1/4 w-[32rem] h-[32rem] bg-gold/12 dark:bg-gold/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '10s' }} />
-      <div className="absolute top-1/2 -right-20 w-[28rem] h-[28rem] bg-leaf-light/10 dark:bg-leaf/10 rounded-full blur-[90px]" />
+      {/* 1. Warm Golden & Botanical Ambient Radial Gradients (Navbar Green + Logo Gold) */}
+      <div className="absolute top-12 left-1/4 w-[38rem] h-[38rem] bg-[#B8E2BF]/35 dark:bg-emerald-600/12 rounded-full blur-[110px] animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute bottom-10 right-1/4 w-[34rem] h-[34rem] bg-gold/15 dark:bg-gold/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '10s' }} />
+      <div className="absolute top-1/2 -right-20 w-[30rem] h-[30rem] bg-[#B8E2BF]/25 dark:bg-leaf/10 rounded-full blur-[90px]" />
 
       {/* 2. Traditional South Indian Kolam / Mandala Sacred Geometry (Slow Rotating Heritage Backdrop) */}
       <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[580px] h-[580px] opacity-[0.06] dark:opacity-[0.08] transition-opacity">

@@ -84,7 +84,7 @@ export const SignatureDishes: React.FC = () => {
   };
 
   return (
-    <section id="signatures" className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="signatures" className="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-transparent via-[#B8E2BF]/15 to-transparent">
       {/* Decorative leaf vein line at top */}
       <div className="leaf-vein-line mb-16" />
 
@@ -93,7 +93,7 @@ export const SignatureDishes: React.FC = () => {
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-xs font-bold uppercase tracking-widest text-leaf-vibrant mb-3 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B8E2BF]/50 border border-leaf/30 text-xs font-bold uppercase tracking-widest text-forest mb-3 shadow-xs">
               <span className="text-sm">🍃</span>
               <span>Banana Leaf Specialties • Crowning Delicacies</span>
             </div>

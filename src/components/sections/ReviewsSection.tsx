@@ -14,7 +14,7 @@ export const ReviewsSection: React.FC = () => {
   }, [reviews.length]);
 
   return (
-    <section id="reviews" className="py-24 sm:py-32 relative bg-sand/30 dark:bg-espresso/40">
+    <section id="reviews" className="py-24 sm:py-32 relative bg-gradient-to-b from-[#B8E2BF]/20 via-cream to-[#B8E2BF]/15 dark:bg-espresso/40">
       {/* Decorative leaf vein line at top */}
       <div className="leaf-vein-line mb-16" />
 
@@ -23,7 +23,7 @@ export const ReviewsSection: React.FC = () => {
         {/* Header & Google Rating Badge */}
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-16">
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/15 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf dark:text-gold mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#B8E2BF]/50 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-forest dark:text-gold mb-3 shadow-xs">
               <span>Verified Patron Reviews</span>
             </div>
             <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">

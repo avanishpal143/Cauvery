@@ -126,7 +126,7 @@ export const MenuSection: React.FC = () => {
                   className={`px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-all cursor-pointer ${
                     isActive
                       ? 'bg-gradient-to-r from-leaf to-forest text-cream dark:bg-gold dark:text-forest shadow-md shadow-leaf/20 border border-gold/30'
-                      : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 hover:bg-leaf-tender border border-leaf/20 dark:border-gold/20 shadow-sm'
+                      : 'bg-[#B8E2BF]/35 dark:bg-espresso-card text-forest/90 dark:text-cream/70 hover:bg-[#B8E2BF]/75 border border-leaf/25 dark:border-gold/20 shadow-xs'
                   }`}
                 >
                   {cat.name}

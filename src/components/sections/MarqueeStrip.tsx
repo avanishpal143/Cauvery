@@ -21,7 +21,7 @@ export const MarqueeStrip: React.FC = () => {
   ];
 
   return (
-    <div className="relative py-4 sm:py-5 overflow-hidden bg-gradient-to-r from-[#0C2F1A] via-[#1E6737] to-[#0C2F1A] dark:from-[#1A1009] dark:via-[#261910] dark:to-[#1A1009] text-cream border-y border-gold/40 shadow-lg select-none">
+    <div className="relative py-4 sm:py-5 overflow-hidden bg-gradient-to-r from-[#1A0E08] via-[#2E7D32] to-[#1A0E08] dark:from-[#1A1009] dark:via-[#261910] dark:to-[#1A1009] text-cream border-y border-gold/40 shadow-lg select-none">
       {/* Vein pattern accent */}
       <div className="flex w-max space-x-8 items-center animate-marquee"
            style={{ animationDuration: `${currentDuration}s` }}>

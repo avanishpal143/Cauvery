@@ -8,7 +8,9 @@
   --color-leaf: #2E7D32;
   --color-leaf-light: #388E3C;
   --color-leaf-vibrant: #2E7D32;
-  --color-leaf-tender: #EAF5EC;
+  --color-leaf-tender: #B8E2BF;
+  --color-leaf-soft: #D5EFE0;
+  --color-navbar-green: #B8E2BF;
   --color-gold: #D99426;
   --color-gold-light: #F3C367;
   --color-gold-deep: #B87314;
@@ -25,18 +27,18 @@
 }
 
 :root {
-  /* Official Cauvery Brand Identity Palette Extracted from Logo */
+  /* Official Cauvery Brand Identity Palette Extracted from Logo & Navbar */
   --bg-page: #FCFAF6;
   --text-main: #2A1810;
   --text-muted: #5A4335;
   --card-bg: #FFFFFF;
-  --card-border: rgba(46, 125, 50, 0.18);
+  --card-border: rgba(46, 125, 50, 0.22);
   --accent-gold: #D99426;
   --accent-leaf: #2E7D32;
   --banana-leaf: #2E7D32;
-  --banana-sprout: #EAF5EC;
-  --nav-glass: rgba(252, 250, 246, 0.95);
-  --vein-color: rgba(46, 125, 50, 0.28);
+  --banana-sprout: #B8E2BF;
+  --nav-glass: #B8E2BF;
+  --vein-color: rgba(46, 125, 50, 0.35);
   --banner-bg: #2A1810;
 }
 

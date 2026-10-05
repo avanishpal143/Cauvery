@@ -45,15 +45,15 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 relative">
-      {/* Decorative leaf vein line at top */}
+    <section id="contact" className="py-24 sm:py-32 relative bg-gradient-to-b from-transparent via-[#B8E2BF]/20 to-transparent">
+      {/* Decorative leaf divider line at top */}
       <div className="leaf-vein-line mb-16" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B8E2BF]/50 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-forest dark:text-gold mb-3 shadow-xs">
             <span>🌿 Visit Us in Pimpri Chinchwad</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">

@@ -48,7 +48,7 @@ export const StorySection: React.FC = () => {
   ];
 
   return (
-    <section id="story" className="relative py-24 sm:py-32 overflow-hidden bg-sand/30 dark:bg-espresso/50">
+    <section id="story" className="relative py-24 sm:py-32 overflow-hidden bg-gradient-to-b from-[#B8E2BF]/25 via-cream to-[#B8E2BF]/15 dark:bg-espresso/50">
       {/* Decorative leaf divider line at top */}
       <div className="leaf-vein-line mb-16" />
 
@@ -56,7 +56,7 @@ export const StorySection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold mb-3 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B8E2BF]/50 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-forest dark:text-gold mb-3 shadow-xs">
             <span>🌿 Our Philosophy &amp; Craft</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">
@@ -80,7 +80,7 @@ export const StorySection: React.FC = () => {
                   className={`px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap cursor-pointer ${
                     activeStep === idx
                       ? 'bg-gradient-to-r from-leaf to-forest text-cream dark:bg-gold dark:text-forest shadow-md shadow-leaf/20 scale-105 border border-gold/30'
-                      : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 hover:bg-leaf-tender border border-leaf/15 dark:border-gold/15'
+                      : 'bg-[#B8E2BF]/40 dark:bg-espresso-card text-forest/90 dark:text-cream/70 hover:bg-[#B8E2BF]/80 border border-leaf/25 dark:border-gold/15'
                   }`}
                 >
                   {s.badge}

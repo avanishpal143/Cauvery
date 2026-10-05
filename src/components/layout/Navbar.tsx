@@ -56,12 +56,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/75 dark:bg-cream/5 border border-leaf/20 dark:border-gold/15 shadow-sm backdrop-blur-sm">
+          <nav className="hidden lg:flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 shadow-sm backdrop-blur-sm">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs font-bold tracking-wider uppercase text-forest/90 dark:text-cream/80 hover:text-leaf-vibrant dark:hover:text-gold rounded-full transition-colors hover:bg-leaf-tender dark:hover:bg-cream/10"
+                className="px-3.5 py-1.5 text-[13px] font-extrabold tracking-wider uppercase text-forest dark:text-cream/90 hover:text-leaf-vibrant dark:hover:text-gold rounded-full transition-all hover:bg-leaf-tender/80 dark:hover:bg-cream/10 active:scale-95"
               >
                 {link.label}
               </a>
@@ -71,24 +71,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
           {/* Right Action Icons & Badges */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Live Open/Closed indicator */}
-            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-[11px] font-semibold shadow-xs">
+            <div className="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-cream/10 border border-leaf/30 dark:border-gold/30 text-xs font-extrabold text-forest dark:text-cream/90 shadow-xs">
               <span
-                className={`w-2 h-2 rounded-full ${
-                  isOpen ? 'bg-emerald-600 animate-pulse' : 'bg-red-500'
+                className={`w-2.5 h-2.5 rounded-full ${
+                  isOpen ? 'bg-emerald-600 animate-pulse ring-2 ring-emerald-300' : 'bg-red-500'
                 }`}
               />
-              <span className="text-forest dark:text-cream/90">{statusText}</span>
+              <span className="tracking-wide">{statusText}</span>
             </div>
 
             {/* WhatsApp Cart Trigger */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2.5 rounded-full bg-white/90 dark:bg-cream/10 hover:bg-leaf-tender text-forest dark:text-cream transition-all cursor-pointer border border-leaf/20 dark:border-gold/30 shadow-sm"
+              className="relative p-2.5 sm:p-3 rounded-full bg-white/95 dark:bg-cream/10 hover:bg-white text-forest dark:text-cream transition-all cursor-pointer border border-leaf/30 dark:border-gold/30 shadow-xs hover:shadow-md hover:scale-105 active:scale-95"
               aria-label="View Cart"
             >
-              <ShoppingBag className="w-4 h-4 text-leaf-vibrant dark:text-cream" />
+              <ShoppingBag className="w-5 h-5 text-leaf-vibrant dark:text-gold stroke-[2.2]" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-chilli text-cream text-[10px] font-bold flex items-center justify-center shadow-md animate-bounce">
+                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-chilli text-cream text-[11px] font-extrabold flex items-center justify-center shadow-md animate-bounce">
                   {totalItems}
                 </span>
               )}
@@ -97,19 +97,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
             {/* Table Booking CTA */}
             <button
               onClick={onBookTableClick}
-              className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-bold text-xs tracking-wider uppercase transition-all shadow-md shadow-forest/15 hover:shadow-lg cursor-pointer transform hover:-translate-y-0.5 border border-gold/40"
+              className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-extrabold text-[13px] tracking-wider uppercase transition-all shadow-md shadow-forest/20 hover:shadow-xl cursor-pointer transform hover:-translate-y-0.5 active:scale-95 border border-gold/50"
             >
-              <Calendar className="w-3.5 h-3.5 text-gold-light" />
+              <Calendar className="w-4 h-4 text-gold-light stroke-[2.2]" />
               <span>Book Table</span>
             </button>
 
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-full text-forest dark:text-cream hover:bg-forest/10 dark:hover:bg-cream/10 transition-colors cursor-pointer"
+              className="lg:hidden p-2.5 rounded-full text-forest dark:text-cream bg-white/85 dark:bg-cream/10 hover:bg-white border border-leaf/25 shadow-xs transition-all cursor-pointer active:scale-95"
               aria-label="Toggle Menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-6 h-6 stroke-[2.2]" /> : <MenuIcon className="w-6 h-6 stroke-[2.2]" />}
             </button>
           </div>
         </div>
@@ -127,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide text-forest dark:text-cream hover:bg-sand dark:hover:bg-forest-dark transition-colors"
+                  className="px-4 py-2.5 rounded-xl text-[15px] font-extrabold tracking-wide text-forest dark:text-cream hover:bg-white/70 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -139,7 +139,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
                     setMobileMenuOpen(false);
                     onBookTableClick();
                   }}
-                  className="flex-1 py-3 rounded-xl bg-gold text-forest font-bold text-xs uppercase tracking-wider text-center shadow-md cursor-pointer"
+                  className="flex-1 py-3 rounded-xl bg-gradient-to-r from-leaf to-forest text-cream font-extrabold text-xs uppercase tracking-wider text-center shadow-md cursor-pointer border border-gold/40"
                 >
                   Book Table / Order
                 </button>

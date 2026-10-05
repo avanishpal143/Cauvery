@@ -37,8 +37,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'py-3 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md shadow-md shadow-forest/5 border-b border-leaf/15 dark:border-gold/20'
-            : 'py-5 bg-transparent'
+            ? 'py-2.5 sm:py-3 bg-[#EAF5EC]/90 dark:bg-espresso/90 backdrop-blur-md shadow-md shadow-forest/5 border-b border-leaf/20 dark:border-gold/20'
+            : 'py-4 sm:py-5 bg-[#EAF5EC]/55 dark:bg-espresso/50 backdrop-blur-md border-b border-leaf/10 dark:border-gold/10'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/80 dark:bg-cream/5 border border-leaf/20 dark:border-gold/15 shadow-sm backdrop-blur-sm">
+          <nav className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/75 dark:bg-cream/5 border border-leaf/20 dark:border-gold/15 shadow-sm backdrop-blur-sm">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -63,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
           {/* Right Action Icons & Badges */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Live Open/Closed indicator */}
-            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-[11px] font-semibold">
+            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/80 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-[11px] font-semibold shadow-xs">
               <span
                 className={`w-2 h-2 rounded-full ${
                   isOpen ? 'bg-emerald-600 animate-pulse' : 'bg-red-500'
@@ -81,12 +81,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
               <Moon className="w-4 h-4 text-forest" />
             </button>
             */}
-
-            {/* Fresh Banana Leaf Cafe Badge */}
-            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-forest text-xs font-bold shadow-sm">
-              <span className="text-sm">🍃</span>
-              <span className="text-[11px] text-leaf font-bold uppercase tracking-wider">Banana Leaf</span>
-            </div>
 
             {/* WhatsApp Cart Trigger */}
             <button

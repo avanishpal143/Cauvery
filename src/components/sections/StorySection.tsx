@@ -12,7 +12,7 @@ export const StorySection: React.FC = () => {
       quote: '"Food is not merely sustenance; it is sacred prasadam."',
       desc: 'Our culinary journey traces the fertile riverbanks of Cauvery, from Kodagu hills through Mysore to Thanjavur. We carry forth the sacred tradition of temple kitchens, where food is prepared with pure ingredients, mindful patience, and reverence.',
       stats: '1970s Heritage Recipe',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/hero-dosa-feast.jpg',
       pill: 'Authentic Lineage',
     },
     {
@@ -22,7 +22,7 @@ export const StorySection: React.FC = () => {
       quote: '"No baking soda. No preservatives. Just wild natural yeast."',
       desc: 'We grind select high-grade urad dal and unpolished parboiled rice in heavy granite stone wet-grinders for over 3 hours. The batter is allowed to naturally rest and ferment for 24 hours, yielding naturally probiotic, cloud-soft idlis and crisp golden dosas.',
       stats: '24-Hour Slow Rise',
-      image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/steamed-idli-sambar.jpg',
       pill: 'Probiotic Goodness',
     },
     {
@@ -32,7 +32,7 @@ export const StorySection: React.FC = () => {
       quote: '"The sizzle of water droplets on cast iron is our symphony."',
       desc: 'Every morning at 6:30 AM, our seasoned heavy cast-iron tawas reach optimum caramelization heat. Master karigars hand-spread paper-thin batter with circular precision, showering aromatic pure cow ghee till the edges lift naturally into crisp amber scrolls.',
       stats: 'Pure Cow Desi Ghee',
-      image: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/crispy-masala-dosa.jpg',
       pill: 'Artisanal Craft',
     },
     {
@@ -42,7 +42,7 @@ export const StorySection: React.FC = () => {
       quote: '"Ground fresh thrice daily. Sambar simmered in small batches."',
       desc: 'Our coconut chutney is grated from fresh coastal coconuts and stone-crushed every 3 hours with roasted chana and green chillies. Sambar is prepared using slow-boiled toor dal, fresh shallots, drumsticks, and our secret 18-spice hand-roasted blend.',
       stats: '3 Daily Fresh Batches',
-      image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1000&q=80',
+      image: '/images/hero-dosa-feast.jpg',
       pill: 'Farm Fresh Ingredients',
     },
   ];
@@ -164,7 +164,7 @@ export const StorySection: React.FC = () => {
                 alt={steps[activeStep].title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none" />
               
               <div className="absolute bottom-6 left-6 right-6 text-cream">
                 <span className="text-[11px] uppercase tracking-widest font-mono text-gold block mb-1">

@@ -22,7 +22,7 @@
       "calories": "340 kcal",
       "prepTime": "8 mins",
       "tags": ["Pure Ghee", "Signature", "Classic"],
-      "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/crispy-masala-dosa.jpg"
     },
     {
       "id": "mysore-masala",
@@ -37,7 +37,7 @@
       "calories": "395 kcal",
       "prepTime": "10 mins",
       "tags": ["Chef's Special", "Fiery", "Bestseller"],
-      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/hero-dosa-feast.jpg"
     },
     {
       "id": "paper-roast",
@@ -52,7 +52,7 @@
       "calories": "320 kcal",
       "prepTime": "10 mins",
       "tags": ["Extra Crispy", "Feather-light", "Family Favorite"],
-      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/crispy-masala-dosa.jpg"
     },
     {
       "id": "rava-onion-dosa",
@@ -66,7 +66,7 @@
       "calories": "380 kcal",
       "prepTime": "12 mins",
       "tags": ["Crunchy", "Peppercorn Note"],
-      "image": "https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/crispy-masala-dosa.jpg"
     },
     {
       "id": "cheese-chilli-dosa",
@@ -80,7 +80,7 @@
       "calories": "440 kcal",
       "prepTime": "9 mins",
       "tags": ["Cheese Pull", "College Favorite"],
-      "image": "https://images.unsplash.com/photo-1610192244261-3f33de3f55e4?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/hero-dosa-feast.jpg"
     },
     {
       "id": "steamed-idli-pair",
@@ -95,7 +95,7 @@
       "calories": "160 kcal",
       "prepTime": "4 mins",
       "tags": ["Jasmine Soft", "Healthy", "Zero Oil"],
-      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/steamed-idli-sambar.jpg"
     },
     {
       "id": "ghee-podi-idli",
@@ -110,7 +110,7 @@
       "calories": "290 kcal",
       "prepTime": "6 mins",
       "tags": ["Desi Ghee", "Gunpowder", "Addictive"],
-      "image": "https://images.unsplash.com/photo-1505253758473-96b3015f27eb?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/steamed-idli-sambar.jpg"
     },
     {
       "id": "sambar-dipped-idli",
@@ -124,7 +124,7 @@
       "calories": "240 kcal",
       "prepTime": "5 mins",
       "tags": ["Soul Warming", "Sambar Soaked"],
-      "image": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80"
+      "image": "/images/steamed-idli-sambar.jpg"
     },
     {
       "id": "medu-vada-pair",

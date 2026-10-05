@@ -1,47 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Sparkles, Flame, CheckCircle2 } from 'lucide-react';
 
-interface Hotspot {
-  id: string;
-  name: string;
-  desc: string;
-  top: string;
-  left: string;
-}
-
-const hotspots: Hotspot[] = [
-  {
-    id: 'dosa',
-    name: 'Ghee Roast Dosa',
-    desc: 'Golden crisp, 24-hr fermented batter, glistening pure cow ghee',
-    top: '52%',
-    left: '56%',
-  },
-  {
-    id: 'idli',
-    name: 'Malli-Poo Idli',
-    desc: 'Steamed jasmine-soft idlis drizzled with podi & ghee',
-    top: '58%',
-    left: '24%',
-  },
-  {
-    id: 'sambar',
-    name: 'Drumstick Sambar',
-    desc: 'Piping hot, slow-simmered with roasted whole spices & tamarind',
-    top: '28%',
-    left: '32%',
-  },
-  {
-    id: 'chutney',
-    name: 'Coconut Chutney',
-    desc: 'Stone-ground coconut with mustard seed & curry leaf tadka',
-    top: '25%',
-    left: '54%',
-  },
-];
-
 export const HeroPlatterShowcase: React.FC = () => {
-  const [activeSpot, setActiveSpot] = useState<Hotspot | null>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -76,103 +36,48 @@ export const HeroPlatterShowcase: React.FC = () => {
           transform: `rotateY(${tilt.x}deg) rotateX(${tilt.y}deg) scale(${isHovered ? 1.02 : 1})`,
           transition: isHovered ? 'transform 0.15s ease-out' : 'transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1)',
         }}
-        className="relative rounded-3xl overflow-hidden shadow-2xl shadow-forest/25 dark:shadow-black/70 border-2 border-gold/40 bg-forest-dark p-2 sm:p-3"
+        className="relative rounded-3xl overflow-hidden shadow-2xl shadow-forest/20 dark:shadow-black/70 border-2 border-gold/50 bg-white/95 dark:bg-espresso-card p-2 sm:p-2.5 transition-all"
       >
-        {/* Brass Frame Accent Rings */}
-        <div className="relative rounded-2xl overflow-hidden aspect-square w-full">
+        {/* Platter Frame */}
+        <div className="relative rounded-2xl overflow-hidden aspect-square w-full bg-sand/20">
           <img
             src="/images/hero-dosa-feast.jpg"
-            alt="Cauvery Signature Dosa & Idli Feast"
+            alt="Cauvery Signature South Indian Feast Platter"
             className="w-full h-full object-cover rounded-2xl transition-transform duration-700 ease-out hover:scale-105"
             loading="eager"
           />
 
-          {/* Golden Ghee & Warm Steam Glow Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-forest-dark/85 via-transparent to-black/20 pointer-events-none" />
-
-          {/* Animated Steam Plumes Rising Over the Hot Platter */}
-          <div className="absolute inset-x-0 bottom-1/4 h-2/3 pointer-events-none overflow-hidden opacity-75">
-            {[0, 1, 2, 3].map((s) => (
-              <div
-                key={s}
-                className="absolute w-24 h-48 bg-gradient-to-t from-white/20 via-white/10 to-transparent rounded-full blur-xl animate-steam"
-                style={{
-                  left: `${20 + s * 22}%`,
-                  bottom: '10%',
-                  animationDuration: `${3.5 + s * 0.8}s`,
-                  animationDelay: `${s * 0.9}s`,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Interactive Hotspot Pins on Food Items */}
-          {hotspots.map((spot) => (
-            <div
-              key={spot.id}
-              className="absolute z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer"
-              style={{ top: spot.top, left: spot.left }}
-              onClick={() => setActiveSpot(activeSpot?.id === spot.id ? null : spot)}
-              onMouseEnter={() => setActiveSpot(spot)}
-            >
-              {/* Pulsing Pin Marker */}
-              <div className="relative flex items-center justify-center">
-                <span className="absolute w-6 h-6 rounded-full bg-gold/40 animate-ping" />
-                <span className="relative w-7 h-7 rounded-full bg-forest border-2 border-gold text-gold text-xs font-bold flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
-                  ✦
-                </span>
-              </div>
-            </div>
-          ))}
-
-          {/* Active Hotspot Info Card Tooltip */}
-          {activeSpot && (
-            <div
-              className="absolute z-30 bottom-4 inset-x-4 p-3.5 rounded-xl bg-forest-dark/95 border border-gold/40 backdrop-blur-md shadow-2xl animate-fade-in text-cream flex items-start gap-3"
-            >
-              <div className="w-8 h-8 rounded-lg bg-gold/15 border border-gold/40 flex items-center justify-center text-gold shrink-0">
-                <Sparkles className="w-4 h-4" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between">
-                  <h4 className="text-xs font-bold font-display text-gold tracking-wide">
-                    {activeSpot.name}
-                  </h4>
-                  <button
-                    onClick={() => setActiveSpot(null)}
-                    className="text-[10px] text-cream/60 hover:text-cream px-1"
-                  >
-                    ✕
-                  </button>
-                </div>
-                <p className="text-[11px] text-cream/80 mt-0.5 leading-snug">
-                  {activeSpot.desc}
-                </p>
-              </div>
-            </div>
-          )}
-
-          {/* Top-Right Badge: Fresh From Tawa */}
-          <div className="absolute top-3.5 right-3.5 flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-dark/85 backdrop-blur-md border border-gold/30 text-gold text-[11px] font-bold shadow-lg">
+          {/* Delicate Top & Bottom Badges (No dark murky overlays on the food!) */}
+          <div className="absolute top-3 right-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest/90 dark:bg-espresso/90 backdrop-blur-md border border-gold/40 text-gold text-xs font-bold shadow-lg">
             <Flame className="w-3.5 h-3.5 text-chilli animate-pulse" />
             <span>Sizzling Hot</span>
           </div>
 
-          {/* Bottom-Left Micro Badge */}
-          <div className="absolute bottom-3.5 left-3.5 flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest-dark/85 backdrop-blur-md border border-leaf/40 text-cream text-[11px] font-medium shadow-lg">
+          <div className="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest/90 dark:bg-espresso/90 backdrop-blur-md border border-leaf/40 text-cream text-xs font-semibold shadow-lg">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Freshly Ground Batter</span>
+            <span>100% Pure Ghee</span>
+          </div>
+
+          {/* Bottom Interactive Quick-Tags (Neat, clean ribbon at bottom) */}
+          <div className="absolute bottom-3 inset-x-3 flex items-center justify-between gap-2 p-2 rounded-xl bg-forest/95 dark:bg-espresso/95 backdrop-blur-md border border-gold/30 shadow-lg text-cream">
+            <div className="flex items-center gap-1.5 min-w-0">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+              <span className="text-xs font-bold text-cream truncate">
+                Authentic Royal Thali
+              </span>
+            </div>
+            <div className="flex items-center gap-1 text-[11px] text-gold font-medium shrink-0">
+              <Sparkles className="w-3 h-3" />
+              <span>Served Fresh</span>
+            </div>
           </div>
         </div>
 
         {/* Bottom Status Ribbon */}
-        <div className="pt-2.5 pb-1 px-2 flex items-center justify-between text-[11px] text-cream/75">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-semibold text-cream">Authentic South Indian Platter</span>
-          </div>
-          <span className="text-gold font-mono text-[10px] tracking-wider uppercase">
-            ✦ Tap Pins to Explore
+        <div className="pt-2.5 pb-1 px-2 flex items-center justify-between text-[11px] text-forest/70 dark:text-cream/70">
+          <span className="font-semibold">Crispy Dosa • Soft Idlis • Sambar • Chutneys</span>
+          <span className="text-leaf-vibrant dark:text-gold font-bold text-[10px] tracking-wider uppercase">
+            ✦ Prepared Live
           </span>
         </div>
       </div>

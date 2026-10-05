@@ -24,7 +24,7 @@ const SIGNATURES: SignatureDishItem[] = [
     spiciness: 3,
     isJain: false,
     desc: 'Lathered with fiery red garlic-chilli chutney, dollop of yellow butter, and spiced aloo palya, roasted till deep burgundy crunch.',
-    image: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=800&q=80',
+    image: '/images/hero-dosa-feast.jpg',
   },
   {
     id: 'paper-roast',
@@ -35,7 +35,7 @@ const SIGNATURES: SignatureDishItem[] = [
     spiciness: 0,
     isJain: true,
     desc: 'Ultra-thin crispy wafer scroll brushed with pure cow ghee. Light as parchment with a buttery caramel finish that crackles.',
-    image: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=800&q=80',
+    image: '/images/crispy-masala-dosa.jpg',
   },
   {
     id: 'ghee-podi-idli',
@@ -46,7 +46,7 @@ const SIGNATURES: SignatureDishItem[] = [
     spiciness: 3,
     isJain: true,
     desc: 'Fluffy giant plate idli drenched in sizzling desi cow ghee and blanketed with Cauvery hand-roasted gunpowder podi.',
-    image: 'https://images.unsplash.com/photo-1505253758473-96b3015f27eb?auto=format&fit=crop&w=800&q=80',
+    image: '/images/steamed-idli-sambar.jpg',
   },
   {
     id: 'masala-dosa',
@@ -57,7 +57,7 @@ const SIGNATURES: SignatureDishItem[] = [
     spiciness: 1,
     isJain: true,
     desc: 'Crisp golden crepe roasted in pure ghee, stuffed with seasoned spiced potato mash, served with 2 chutneys & shallot sambar.',
-    image: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=800&q=80',
+    image: '/images/crispy-masala-dosa.jpg',
   },
   {
     id: 'degree-filter-coffee',
@@ -138,9 +138,9 @@ export const SignatureDishes: React.FC = () => {
                 <img
                   src={dish.image}
                   alt={dish.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-40 pointer-events-none" />
 
                 {/* Badge Tag */}
                 <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-forest/90 dark:bg-espresso/90 border border-gold/40 text-[10px] font-bold tracking-widest uppercase text-gold">

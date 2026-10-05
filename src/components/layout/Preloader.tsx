@@ -113,8 +113,8 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
         <div className="flex items-center gap-2.5 w-full justify-center mb-6">
           <span className="text-[11px] text-emerald-400">🌿</span>
           <div className="h-[1.5px] w-8 bg-gradient-to-r from-transparent to-gold" />
-          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.3em] font-extrabold text-gold-light whitespace-nowrap">
-            The Art of Dosa &amp; Idli
+          <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.25em] font-extrabold text-gold-light whitespace-nowrap">
+            Pure Veg • Pune
           </span>
           <div className="h-[1.5px] w-8 bg-gradient-to-r from-gold to-transparent" />
           <span className="text-[11px] text-emerald-400">🌿</span>

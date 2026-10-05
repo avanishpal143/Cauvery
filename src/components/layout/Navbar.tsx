@@ -137,6 +137,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
                 </a>
               ))}
 
+              {/* Mobile Theme Toggle Button */}
+              <button
+                onClick={toggleTheme}
+                className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide text-forest dark:text-cream hover:bg-sand dark:hover:bg-forest-dark transition-colors cursor-pointer text-left"
+              >
+                <span>Theme / Appearance</span>
+                <span className="flex items-center gap-1.5 text-xs text-copper dark:text-gold font-bold bg-forest/5 dark:bg-cream/10 px-2.5 py-1 rounded-full">
+                  {theme === 'dark' ? <Sun className="w-3.5 h-3.5 text-gold" /> : <Moon className="w-3.5 h-3.5 text-forest" />}
+                  {theme === 'dark' ? 'Dark Mode' : 'Light Mode'}
+                </span>
+              </button>
+
               <div className="pt-3 border-t border-forest/10 dark:border-cream/10 flex items-center gap-3">
                 <button
                   onClick={() => {

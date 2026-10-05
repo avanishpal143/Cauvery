@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Lenis from 'lenis';
 import { CartProvider } from './context/CartContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { Preloader } from './components/layout/Preloader';
 import { CustomCursor } from './components/ui/CustomCursor';
 import { ScrollStemProgress } from './components/ui/ScrollStemProgress';
@@ -54,63 +55,65 @@ export function App() {
   };
 
   return (
-    <CartProvider>
-      {/* 1. Preloader */}
-      {loading && <Preloader onComplete={() => setLoading(false)} />}
+    <ThemeProvider>
+      <CartProvider>
+        {/* 1. Preloader */}
+        {loading && <Preloader onComplete={() => setLoading(false)} />}
 
-      <div className="relative min-h-screen bg-cream dark:bg-espresso text-forest dark:text-cream selection:bg-gold/30 selection:text-forest transition-colors duration-400 bg-grain">
-        {/* Custom Gold Cursor for Desktop */}
-        <CustomCursor />
+        <div className="relative min-h-screen bg-cream dark:bg-espresso text-forest dark:text-cream selection:bg-gold/30 selection:text-forest transition-colors duration-400 bg-grain">
+          {/* Custom Gold Cursor for Desktop */}
+          <CustomCursor />
 
-        {/* Leaf Stem Scroll Progress Bar */}
-        <ScrollStemProgress />
+          {/* Leaf Stem Scroll Progress Bar */}
+          <ScrollStemProgress />
 
-        {/* Sticky Glassmorphic Navbar */}
-        <Navbar onBookTableClick={handleScrollToBooking} />
+          {/* Sticky Glassmorphic Navbar */}
+          <Navbar onBookTableClick={handleScrollToBooking} />
 
-        {/* Main Content Layout */}
-        <main>
-          {/* Hero Section with 3D Canvas */}
-          <HeroSection
-            onExploreMenu={handleScrollToMenu}
-            onBookTable={handleScrollToBooking}
-          />
+          {/* Main Content Layout */}
+          <main>
+            {/* Hero Section with 3D Canvas */}
+            <HeroSection
+              onExploreMenu={handleScrollToMenu}
+              onBookTable={handleScrollToBooking}
+            />
 
-          {/* Infinite Velocity Reactive Marquee Strip */}
-          <MarqueeStrip />
+            {/* Infinite Velocity Reactive Marquee Strip */}
+            <MarqueeStrip />
 
-          {/* About / Our Story & Craft */}
-          <StorySection />
+            {/* About / Our Story & Craft */}
+            <StorySection />
 
-          {/* Signature Dishes Showcase */}
-          <SignatureDishes />
+            {/* Signature Dishes Showcase */}
+            <SignatureDishes />
 
-          {/* Deals & Combos of the Day Strip */}
-          <OffersStrip />
+            {/* Deals & Combos of the Day Strip */}
+            <OffersStrip />
 
-          {/* Full Artisanal Menu */}
-          <MenuSection />
+            {/* Full Artisanal Menu */}
+            <MenuSection />
 
-          {/* Ambience & Experience Gallery */}
-          <GallerySection />
+            {/* Ambience & Experience Gallery */}
+            <GallerySection />
 
-          {/* Patron Google Reviews */}
-          <ReviewsSection />
+            {/* Patron Google Reviews */}
+            <ReviewsSection />
 
-          {/* Contact, Timings, Booking & FAQs */}
-          <ContactSection />
-        </main>
+            {/* Contact, Timings, Booking & FAQs */}
+            <ContactSection />
+          </main>
 
-        {/* Footer */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
 
-        {/* Mobile Bottom Sticky Action Bar */}
-        <MobileActionBar onMenuClick={handleScrollToMenu} />
+          {/* Mobile Bottom Sticky Action Bar */}
+          <MobileActionBar onMenuClick={handleScrollToMenu} />
 
-        {/* WhatsApp Cart Slide-out Drawer */}
-        <CartDrawer />
-      </div>
-    </CartProvider>
+          {/* WhatsApp Cart Slide-out Drawer */}
+          <CartDrawer />
+        </div>
+      </CartProvider>
+    </ThemeProvider>
   );
 }
 

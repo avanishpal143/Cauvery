@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useCart } from '../../context/CartContext';
-import { Star, Plus, Flame, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, Plus, Flame, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface SignatureDishItem {
   id: string;
@@ -93,15 +93,14 @@ export const SignatureDishes: React.FC = () => {
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/30 text-xs font-bold uppercase tracking-widest text-copper dark:text-gold mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Crowning Creations</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold mb-3 shadow-sm">
+              <span>🌿 Crowning Delicacies</span>
             </div>
             <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">
               Our Signature Delights
             </h2>
-            <p className="font-body text-sm sm:text-base text-forest/70 dark:text-cream/70 mt-2 max-w-xl">
-              Five legendary items that people travel from across Pune and PCMC to experience. Crafted without shortcuts.
+            <p className="font-body text-sm sm:text-base text-forest/80 dark:text-cream/70 mt-2 max-w-xl">
+              Five legendary items that people travel from across Pune and PCMC to experience. Slow fermented, pure ghee roasted.
             </p>
           </div>
 
@@ -132,7 +131,7 @@ export const SignatureDishes: React.FC = () => {
           {SIGNATURES.map((dish) => (
             <div
               key={dish.id}
-              className="group w-[300px] sm:w-[350px] shrink-0 rounded-3xl bg-white/80 dark:bg-espresso-card border border-forest/10 dark:border-gold/25 shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden hover:-translate-y-2 hover:border-gold"
+              className="group w-[300px] sm:w-[350px] shrink-0 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/25 shadow-xl shadow-leaf/5 hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden hover:-translate-y-2 hover:border-leaf"
             >
               {/* Image Container with Zoom effect */}
               <div className="relative aspect-[4/3] overflow-hidden bg-sand/30">
@@ -164,8 +163,8 @@ export const SignatureDishes: React.FC = () => {
                     </div>
                   )}
                   {dish.isJain && (
-                    <span className="text-[10px] font-bold bg-leaf/90 text-cream px-2 py-0.5 rounded-full uppercase tracking-wider">
-                      Jain Available
+                    <span className="text-[10px] font-bold bg-leaf-vibrant text-cream px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow">
+                      🌿 Jain Available
                     </span>
                   )}
                 </div>
@@ -174,10 +173,10 @@ export const SignatureDishes: React.FC = () => {
               {/* Dish Content & Quick Add */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <h3 className="font-display font-black text-xl text-forest dark:text-cream group-hover:text-leaf dark:group-hover:text-gold transition-colors">
+                  <h3 className="font-display font-black text-xl text-forest dark:text-cream group-hover:text-leaf-vibrant dark:group-hover:text-gold transition-colors">
                     {dish.name}
                   </h3>
-                  <p className="font-body text-xs text-forest/70 dark:text-cream/70 mt-2 line-clamp-2 leading-relaxed">
+                  <p className="font-body text-xs text-forest/75 dark:text-cream/70 mt-2 line-clamp-2 leading-relaxed">
                     {dish.desc}
                   </p>
                 </div>
@@ -187,14 +186,14 @@ export const SignatureDishes: React.FC = () => {
                     <span className="text-[10px] uppercase font-bold tracking-wider text-forest/50 dark:text-cream/50 block">
                       Price
                     </span>
-                    <span className="font-display text-2xl font-black text-forest dark:text-gold">
+                    <span className="font-display text-2xl font-black text-leaf-vibrant dark:text-gold">
                       ₹{dish.price}
                     </span>
                   </div>
 
                   <button
                     onClick={() => addItem({ id: dish.id, name: dish.name, price: dish.price, image: dish.image, isJain: dish.isJain })}
-                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-forest dark:bg-gold hover:bg-leaf dark:hover:bg-gold-light text-cream dark:text-forest font-bold text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 cursor-pointer group/btn"
+                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf dark:bg-gold dark:hover:bg-gold-light text-cream dark:text-forest font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-leaf/20 active:scale-95 cursor-pointer group/btn border border-gold/30"
                   >
                     <Plus className="w-4 h-4 transition-transform group-hover/btn:rotate-90" />
                     <span>Add to Order</span>

@@ -39,7 +39,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? 'py-3 bg-cream/90 dark:bg-espresso/90 backdrop-blur-md shadow-lg border-b border-forest/10 dark:border-gold/20'
+            ? 'py-3 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md shadow-md shadow-forest/5 border-b border-leaf/15 dark:border-gold/20'
             : 'py-5 bg-transparent'
         }`}
       >
@@ -50,12 +50,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/10 dark:border-gold/15 backdrop-blur-sm">
+          <nav className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/80 dark:bg-cream/5 border border-leaf/20 dark:border-gold/15 shadow-sm backdrop-blur-sm">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs font-semibold tracking-wider uppercase text-forest/80 dark:text-cream/80 hover:text-forest dark:hover:text-gold rounded-full transition-colors hover:bg-forest/5 dark:hover:bg-cream/10"
+                className="px-3.5 py-1.5 text-xs font-bold tracking-wider uppercase text-forest/90 dark:text-cream/80 hover:text-leaf-vibrant dark:hover:text-gold rounded-full transition-colors hover:bg-leaf-tender dark:hover:bg-cream/10"
               >
                 {link.label}
               </a>
@@ -65,10 +65,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
           {/* Right Action Icons & Badges */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Live Open/Closed indicator */}
-            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/10 dark:border-gold/20 text-[11px] font-medium">
+            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-[11px] font-semibold">
               <span
                 className={`w-2 h-2 rounded-full ${
-                  isOpen ? 'bg-emerald-500 animate-pulse' : 'bg-red-400'
+                  isOpen ? 'bg-emerald-600 animate-pulse' : 'bg-red-500'
                 }`}
               />
               <span className="text-forest dark:text-cream/90">{statusText}</span>
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
             {/* Dark / Light Mode Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full text-forest dark:text-cream hover:bg-forest/10 dark:hover:bg-cream/10 transition-colors cursor-pointer border border-transparent hover:border-gold/30"
+              className="p-2 rounded-full text-forest dark:text-cream hover:bg-leaf-tender dark:hover:bg-cream/10 transition-colors cursor-pointer border border-leaf/20 dark:border-gold/30 bg-white/70 dark:bg-transparent shadow-sm"
               aria-label="Toggle Dark/Light Mode"
               title={theme === 'dark' ? 'Switch to Light' : 'Switch to Dark'}
             >
@@ -91,10 +91,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
             {/* WhatsApp Cart Trigger */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2.5 rounded-full bg-forest/10 dark:bg-cream/10 hover:bg-gold/20 text-forest dark:text-cream transition-all cursor-pointer border border-forest/10 dark:border-gold/30"
+              className="relative p-2.5 rounded-full bg-white/90 dark:bg-cream/10 hover:bg-leaf-tender text-forest dark:text-cream transition-all cursor-pointer border border-leaf/20 dark:border-gold/30 shadow-sm"
               aria-label="View Cart"
             >
-              <ShoppingBag className="w-4 h-4" />
+              <ShoppingBag className="w-4 h-4 text-leaf-vibrant dark:text-cream" />
               {totalItems > 0 && (
                 <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-chilli text-cream text-[10px] font-bold flex items-center justify-center shadow-md animate-bounce">
                   {totalItems}
@@ -105,9 +105,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
             {/* Table Booking CTA */}
             <button
               onClick={onBookTableClick}
-              className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-full bg-gold hover:bg-gold-light text-forest font-bold text-xs tracking-wider uppercase transition-all shadow-md hover:shadow-lg cursor-pointer transform hover:-translate-y-0.5"
+              className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-bold text-xs tracking-wider uppercase transition-all shadow-md shadow-forest/15 hover:shadow-lg cursor-pointer transform hover:-translate-y-0.5 border border-gold/40"
             >
-              <Calendar className="w-3.5 h-3.5" />
+              <Calendar className="w-3.5 h-3.5 text-gold-light" />
               <span>Book Table</span>
             </button>
 

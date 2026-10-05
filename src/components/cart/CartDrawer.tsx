@@ -42,19 +42,19 @@ export const CartDrawer: React.FC = () => {
 
       {/* Drawer Panel */}
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-cream dark:bg-espresso shadow-2xl flex flex-col border-l border-gold/30">
+        <div className="w-screen max-w-md bg-[#FCF9F2] dark:bg-espresso shadow-2xl flex flex-col border-l border-leaf/30 dark:border-gold/30">
           {/* Header */}
-          <div className="p-6 border-b border-forest/10 dark:border-cream/10 flex items-center justify-between bg-sand/30 dark:bg-espresso-card">
+          <div className="p-6 border-b border-leaf/20 dark:border-cream/10 flex items-center justify-between bg-leaf-tender/90 dark:bg-espresso-card">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center text-forest dark:text-gold">
-                <ShoppingBag className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-full bg-leaf text-cream flex items-center justify-center shadow-sm">
+                <ShoppingBag className="w-5 h-5 text-gold-light" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-lg text-forest dark:text-cream">
-                  Your WhatsApp Feast
+                  🌿 Your WhatsApp Feast
                 </h3>
-                <p className="text-xs text-leaf dark:text-gold-light">
-                  {totalItems} {totalItems === 1 ? 'item' : 'items'} selected
+                <p className="text-xs text-leaf-vibrant dark:text-gold-light font-semibold">
+                  {totalItems} {totalItems === 1 ? 'delicacy' : 'delicacies'} selected
                 </p>
               </div>
             </div>

@@ -24,21 +24,21 @@ export const MobileActionBar: React.FC<MobileActionBarProps> = ({ onMenuClick })
   };
 
   return (
-    <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden p-3 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md border-t border-forest/10 dark:border-gold/30 shadow-[0_-5px_20px_rgba(0,0,0,0.15)]">
+    <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden p-3 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md border-t border-leaf/20 dark:border-gold/30 shadow-[0_-5px_25px_rgba(13,53,29,0.12)]">
       <div className="grid grid-cols-4 gap-2">
         {/* Call Now */}
         <a
           href="tel:+919876543210"
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-forest/5 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-leaf-tender/80 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform border border-leaf/20 dark:border-transparent"
         >
-          <Phone className="w-4 h-4 text-leaf dark:text-gold mb-1" />
+          <Phone className="w-4 h-4 text-leaf-vibrant dark:text-gold mb-1" />
           <span className="text-[10px] font-bold tracking-tight">Call</span>
         </a>
 
         {/* WhatsApp Chat */}
         <button
           onClick={handleWhatsApp}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-forest/5 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform cursor-pointer"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-[#25D366]/15 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform cursor-pointer border border-[#25D366]/25 dark:border-transparent"
         >
           <MessageCircle className="w-4 h-4 text-[#25D366] mb-1" />
           <span className="text-[10px] font-bold tracking-tight">WhatsApp</span>
@@ -47,7 +47,7 @@ export const MobileActionBar: React.FC<MobileActionBarProps> = ({ onMenuClick })
         {/* Directions */}
         <button
           onClick={handleDirections}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-forest/5 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform cursor-pointer"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-white/90 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform cursor-pointer border border-leaf/20 dark:border-transparent shadow-xs"
         >
           <MapPin className="w-4 h-4 text-chilli mb-1" />
           <span className="text-[10px] font-bold tracking-tight">Directions</span>
@@ -65,14 +65,14 @@ export const MobileActionBar: React.FC<MobileActionBarProps> = ({ onMenuClick })
               el?.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="relative flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-gold active:scale-95 text-forest font-bold transition-transform shadow-md cursor-pointer"
+          className="relative flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-gradient-to-r from-leaf to-forest active:scale-95 text-cream font-bold transition-transform shadow-md shadow-leaf/25 cursor-pointer border border-gold/40"
         >
-          <UtensilsCrossed className="w-4 h-4 mb-1" />
+          <UtensilsCrossed className="w-4 h-4 mb-1 text-gold-light" />
           <span className="text-[10px] tracking-tight">
             {totalItems > 0 ? `Cart (${totalItems})` : 'Menu'}
           </span>
           {totalItems > 0 && (
-            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-chilli text-cream text-[9px] font-black flex items-center justify-center">
+            <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-chilli text-cream text-[9px] font-black flex items-center justify-center shadow">
               {totalItems}
             </span>
           )}

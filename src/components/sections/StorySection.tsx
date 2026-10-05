@@ -56,14 +56,13 @@ export const StorySection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/15 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf dark:text-gold mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Our Philosophy</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold mb-3 shadow-sm">
+            <span>🌿 Our Philosophy &amp; Craft</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">
             The Craft of Pure Perfection
           </h2>
-          <p className="font-body text-sm sm:text-base text-forest/70 dark:text-cream/70 mt-3">
+          <p className="font-body text-sm sm:text-base text-forest/80 dark:text-cream/70 mt-3">
             How a humble bowl of batter transforms into an award-winning sensory ritual every single day in Pimpri Chinchwad.
           </p>
         </div>
@@ -80,8 +79,8 @@ export const StorySection: React.FC = () => {
                   onClick={() => setActiveStep(idx)}
                   className={`px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition-all whitespace-nowrap cursor-pointer ${
                     activeStep === idx
-                      ? 'bg-forest text-gold dark:bg-gold dark:text-forest shadow-md scale-105'
-                      : 'bg-cream dark:bg-espresso-card text-forest/70 dark:text-cream/70 hover:bg-sand'
+                      ? 'bg-gradient-to-r from-leaf to-forest text-cream dark:bg-gold dark:text-forest shadow-md shadow-leaf/20 scale-105 border border-gold/30'
+                      : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 hover:bg-leaf-tender border border-leaf/15 dark:border-gold/15'
                   }`}
                 >
                   {s.badge}
@@ -90,12 +89,13 @@ export const StorySection: React.FC = () => {
             </div>
 
             {/* Active Story Card */}
-            <div className="p-8 rounded-3xl bg-white/80 dark:bg-espresso-card border border-forest/10 dark:border-gold/25 shadow-xl transition-all duration-300">
+            <div className="p-8 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/25 shadow-xl shadow-leaf/5 transition-all duration-300">
               <div className="flex items-center justify-between mb-4">
-                <span className="text-xs font-mono font-bold tracking-widest uppercase text-chilli dark:text-gold">
-                  {steps[activeStep].badge} • {steps[activeStep].pill}
+                <span className="text-xs font-mono font-bold tracking-widest uppercase text-leaf-vibrant dark:text-gold flex items-center gap-1.5">
+                  <span>🌿</span>
+                  <span>{steps[activeStep].badge} • {steps[activeStep].pill}</span>
                 </span>
-                <span className="text-xs px-2.5 py-1 rounded-full bg-forest/5 dark:bg-cream/10 text-forest dark:text-cream font-bold">
+                <span className="text-xs px-3 py-1 rounded-full bg-leaf-tender dark:bg-cream/10 text-leaf-vibrant dark:text-cream font-bold border border-leaf/20">
                   {steps[activeStep].stats}
                 </span>
               </div>
@@ -104,30 +104,30 @@ export const StorySection: React.FC = () => {
                 {steps[activeStep].title}
               </h3>
 
-              <blockquote className="font-display italic text-sm text-copper dark:text-gold-light mb-4 border-l-2 border-gold pl-3">
+              <blockquote className="font-display italic text-sm text-copper dark:text-gold-light mb-4 border-l-2 border-leaf-vibrant pl-3">
                 {steps[activeStep].quote}
               </blockquote>
 
-              <p className="font-body text-sm sm:text-base text-forest/80 dark:text-cream/80 leading-relaxed mb-6">
+              <p className="font-body text-sm sm:text-base text-forest/85 dark:text-cream/80 leading-relaxed mb-6">
                 {steps[activeStep].desc}
               </p>
 
               {/* Quality Checklist */}
               <div className="grid grid-cols-2 gap-3 pt-4 border-t border-forest/10 dark:border-cream/10">
                 <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf dark:text-gold shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
                   <span>Zero Chemicals / Soda</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf dark:text-gold shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
                   <span>A2 Desi Cow Ghee</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf dark:text-gold shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
                   <span>Granite Stone Grinding</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf dark:text-gold shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
                   <span>Cast-Iron Tawa Searing</span>
                 </div>
               </div>

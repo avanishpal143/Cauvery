@@ -3,44 +3,53 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-forest: #0F2E1D;
-  --color-forest-dark: #091C12;
-  --color-leaf: #2F6B3F;
-  --color-leaf-light: #448F59;
-  --color-gold: #E8B04B;
-  --color-gold-light: #F7D488;
-  --color-copper: #C98A2B;
-  --color-chilli: #B8391F;
-  --color-cream: #FBF5E8;
-  --color-sand: #F2E8D3;
-  --color-sand-dark: #E2D3B8;
-  --color-espresso: #1B120B;
-  --color-espresso-card: #251B13;
+  --color-forest: #0D351D;
+  --color-forest-dark: #072313;
+  --color-leaf: #237A3F;
+  --color-leaf-light: #349653;
+  --color-leaf-vibrant: #1E8746;
+  --color-leaf-tender: #EBF7EE;
+  --color-gold: #E8A72B;
+  --color-gold-light: #F7D788;
+  --color-gold-deep: #C78214;
+  --color-copper: #BD7722;
+  --color-chilli: #BF361B;
+  --color-cream: #FCF9F2;
+  --color-sand: #F4EEDF;
+  --color-sand-dark: #E6DCBF;
+  --color-espresso: #18110B;
+  --color-espresso-card: #241A12;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 :root {
-  --bg-page: #FBF5E8;
-  --text-main: #0F2E1D;
-  --text-muted: #56685C;
-  --card-bg: rgba(255, 255, 255, 0.7);
-  --card-border: rgba(47, 107, 63, 0.15);
-  --accent-gold: #E8B04B;
-  --nav-glass: rgba(251, 245, 232, 0.85);
-  --vein-color: rgba(47, 107, 63, 0.2);
+  /* Lush South Indian Banana-Leaf Cafe Light Theme */
+  --bg-page: #FBF8F1;
+  --text-main: #0B311B;
+  --text-muted: #3F614C;
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --card-border: rgba(35, 122, 63, 0.18);
+  --accent-gold: #E8A72B;
+  --accent-leaf: #237A3F;
+  --nav-glass: rgba(251, 248, 241, 0.92);
+  --vein-color: rgba(35, 122, 63, 0.28);
+  --banner-bg: #0E3A20;
 }
 
 .dark {
-  --bg-page: #1B120B;
-  --text-main: #FBF5E8;
-  --text-muted: #B8ADA3;
-  --card-bg: rgba(37, 27, 19, 0.75);
-  --card-border: rgba(232, 176, 75, 0.2);
-  --accent-gold: #E8B04B;
-  --nav-glass: rgba(27, 18, 11, 0.85);
-  --vein-color: rgba(232, 176, 75, 0.25);
+  /* Rich Espresso & Roasted Chicory Night Cafe */
+  --bg-page: #18110B;
+  --text-main: #FCF9F2;
+  --text-muted: #BDB2A6;
+  --card-bg: rgba(36, 26, 18, 0.85);
+  --card-border: rgba(232, 167, 43, 0.22);
+  --accent-gold: #E8A72B;
+  --accent-leaf: #349653;
+  --nav-glass: rgba(24, 17, 11, 0.9);
+  --vein-color: rgba(232, 167, 43, 0.25);
+  --banner-bg: #100B07;
 }
 
 /* Base resets & typography */
@@ -60,34 +69,52 @@ body {
   position: relative;
 }
 
-/* Subtle organic paper grain texture overlay */
+/* Authentic South Indian Botanical Paper & Leaf grain overlay */
 .bg-grain {
-  background-image: radial-gradient(rgba(15, 46, 29, 0.04) 1px, transparent 0);
-  background-size: 24px 24px;
+  background-color: var(--bg-page);
+  background-image: 
+    radial-gradient(rgba(35, 122, 63, 0.05) 1.2px, transparent 0),
+    radial-gradient(rgba(232, 167, 43, 0.04) 1.2px, transparent 0);
+  background-size: 28px 28px, 48px 48px;
+  background-position: 0 0, 14px 14px;
 }
 
 .dark .bg-grain {
-  background-image: radial-gradient(rgba(232, 176, 75, 0.05) 1px, transparent 0);
-  background-size: 24px 24px;
+  background-color: var(--bg-page);
+  background-image: 
+    radial-gradient(rgba(232, 167, 43, 0.06) 1.2px, transparent 0);
+  background-size: 32px 32px;
 }
 
 /* Banana Leaf Vein Divider Lines */
 .leaf-vein-line {
   position: relative;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--vein-color) 20%, var(--accent-gold) 50%, var(--vein-color) 80%, transparent);
+  background: linear-gradient(90deg, transparent, var(--vein-color) 25%, var(--accent-gold) 50%, var(--vein-color) 75%, transparent);
 }
 
 .leaf-vein-line::after {
-  content: "✦";
+  content: "🌿";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--accent-gold);
-  font-size: 14px;
+  font-size: 15px;
   background: var(--bg-page);
-  padding: 0 12px;
+  padding: 0 14px;
+}
+
+/* Fresh Cafe Card shadow & glass */
+.cafe-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 30px -10px rgba(13, 53, 29, 0.07);
+}
+
+.dark .cafe-card {
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
 }
 
 /* Glassmorphism utility */
@@ -100,7 +127,7 @@ body {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
@@ -108,12 +135,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C98A2B;
-  border-radius: 4px;
+  background: #237A3F;
+  border-radius: 6px;
+  border: 2px solid var(--bg-page);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E8B04B;
+  background: #185E30;
 }
 
 /* Shimmer animation for badges and gold glow */
@@ -123,9 +151,20 @@ body {
 }
 
 .gold-shimmer {
-  background: linear-gradient(90deg, rgba(232,176,75,0.1) 0%, rgba(232,176,75,0.4) 50%, rgba(232,176,75,0.1) 100%);
+  background: linear-gradient(90deg, rgba(232,167,43,0.12) 0%, rgba(232,167,43,0.38) 50%, rgba(232,167,43,0.12) 100%);
   background-size: 200% 100%;
   animation: shimmerGold 4s infinite linear;
+}
+
+/* Gentle sway for banana leaf motif */
+@keyframes leafSway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(4deg); }
+}
+
+.animate-leaf-sway {
+  animation: leafSway 4s ease-in-out infinite;
+  transform-origin: bottom center;
 }
 
 /* Smooth steam float keyframe */

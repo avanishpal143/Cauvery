@@ -12,7 +12,7 @@ export const OffersStrip: React.FC = () => {
   };
 
   return (
-    <section className="py-12 bg-forest dark:bg-espresso text-cream border-y border-gold/40 relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-r from-[#092816] via-[#16552D] to-[#092816] dark:from-[#150D07] dark:via-[#20150D] dark:to-[#150D07] text-cream border-y border-gold/40 relative overflow-hidden shadow-inner">
       {/* Background radial highlight */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
 

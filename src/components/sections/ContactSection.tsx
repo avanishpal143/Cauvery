@@ -53,14 +53,13 @@ export const ContactSection: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/15 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf dark:text-gold mb-3">
-            <MapPin className="w-3.5 h-3.5" />
-            <span>Visit Us in Pimpri Chinchwad</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold mb-3 shadow-sm">
+            <span>🌿 Visit Us in Pimpri Chinchwad</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">
             Find Us &amp; Reserve Your Table
           </h2>
-          <p className="font-body text-sm sm:text-base text-forest/70 dark:text-cream/70 mt-2">
+          <p className="font-body text-sm sm:text-base text-forest/80 dark:text-cream/70 mt-2">
             Step in for breakfast with fresh morning filter coffee, an afternoon thali feast, or late-night hot crispy dosas.
           </p>
         </div>
@@ -72,12 +71,12 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Live Timing Status Card */}
-            <div className="p-6 rounded-3xl bg-white/80 dark:bg-espresso-card border border-forest/10 dark:border-gold/30 shadow-md">
+            <div className="p-6 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/30 shadow-md shadow-leaf/5">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                   <span
                     className={`w-3 h-3 rounded-full ${
-                      isOpen ? 'bg-emerald-500 animate-pulse' : 'bg-red-400'
+                      isOpen ? 'bg-emerald-600 animate-pulse' : 'bg-red-500'
                     }`}
                   />
                   <span className="font-display font-bold text-base text-forest dark:text-cream">
@@ -89,13 +88,13 @@ export const ContactSection: React.FC = () => {
                 </span>
               </div>
 
-              <div className="flex items-start gap-3 text-xs text-forest/80 dark:text-cream/80">
+              <div className="flex items-start gap-3 text-xs text-forest/85 dark:text-cream/80">
                 <Clock className="w-4 h-4 text-copper dark:text-gold shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-semibold text-forest dark:text-cream">
+                  <p className="font-bold text-forest dark:text-cream">
                     Daily Timings: 7:00 AM – 11:00 PM
                   </p>
-                  <p className="text-forest/60 dark:text-cream/60 mt-0.5">
+                  <p className="text-forest/70 dark:text-cream/60 mt-0.5">
                     {nextChange} • Kitchen remains continuously active throughout the day.
                   </p>
                 </div>
@@ -103,14 +102,14 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Address Card */}
-            <div className="p-6 rounded-3xl bg-white/80 dark:bg-espresso-card border border-forest/10 dark:border-gold/30 shadow-md space-y-4">
+            <div className="p-6 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/30 shadow-md shadow-leaf/5 space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-chilli shrink-0 mt-1" />
                 <div>
                   <h4 className="font-display font-bold text-base text-forest dark:text-cream">
                     Cafe Address
                   </h4>
-                  <p className="font-body text-xs sm:text-sm text-forest/80 dark:text-cream/80 mt-1 leading-relaxed">
+                  <p className="font-body text-xs sm:text-sm text-forest/85 dark:text-cream/80 mt-1 leading-relaxed">
                     Bansal Avenue, Shop No. 8, Gat No. 1624, Near IIBM College, Opposite Chikli Town Hall, Pimpri Chinchwad, Pune, Maharashtra – 411062.
                   </p>
                 </div>
@@ -119,7 +118,7 @@ export const ContactSection: React.FC = () => {
               <div className="pt-3 border-t border-forest/10 dark:border-cream/10 flex flex-wrap gap-3">
                 <button
                   onClick={openGoogleMaps}
-                  className="flex-1 py-2.5 px-4 rounded-xl bg-forest dark:bg-gold text-cream dark:text-forest font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all hover:bg-leaf dark:hover:bg-gold-light cursor-pointer shadow-sm"
+                  className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm shadow-leaf/20 border border-gold/30"
                 >
                   <Navigation className="w-3.5 h-3.5" />
                   <span>Get Directions</span>
@@ -127,7 +126,7 @@ export const ContactSection: React.FC = () => {
 
                 <a
                   href="tel:+919876543210"
-                  className="py-2.5 px-4 rounded-xl bg-sand/60 dark:bg-espresso text-forest dark:text-cream font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 border border-forest/15 dark:border-gold/25 hover:border-gold cursor-pointer"
+                  className="py-2.5 px-4 rounded-xl bg-white dark:bg-espresso text-forest dark:text-cream font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 border border-leaf/25 dark:border-gold/25 hover:bg-leaf-tender cursor-pointer shadow-sm"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   <span>Call Now</span>
@@ -166,11 +165,11 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             
             {/* Reservation Form */}
-            <div className="p-8 rounded-3xl bg-white/90 dark:bg-espresso-card border border-forest/10 dark:border-gold/30 shadow-xl">
+            <div className="p-8 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/30 shadow-xl shadow-leaf/5">
               <div className="flex items-center gap-2 mb-2">
-                <Calendar className="w-4 h-4 text-gold" />
-                <span className="text-xs font-bold uppercase tracking-widest text-leaf dark:text-gold">
-                  Reserve a Table
+                <Calendar className="w-4 h-4 text-leaf-vibrant dark:text-gold" />
+                <span className="text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold">
+                  🌿 Reserve a Table
                 </span>
               </div>
               <h3 className="font-display font-black text-2xl text-forest dark:text-cream mb-6">
@@ -178,12 +177,12 @@ export const ContactSection: React.FC = () => {
               </h3>
 
               {bookingSuccess ? (
-                <div className="p-6 rounded-2xl bg-leaf/10 border border-leaf/30 text-center space-y-2">
+                <div className="p-6 rounded-2xl bg-leaf-tender/90 border border-leaf/30 text-center space-y-2">
                   <span className="text-2xl">🪷</span>
-                  <h4 className="font-display font-bold text-lg text-leaf dark:text-gold">
+                  <h4 className="font-display font-bold text-lg text-forest dark:text-gold">
                     Booking Request Sent!
                   </h4>
-                  <p className="text-xs text-forest/70 dark:text-cream/70">
+                  <p className="text-xs text-forest/80 dark:text-cream/70">
                     We have redirected your details to our WhatsApp desk. We look forward to hosting you at Cauvery!
                   </p>
                 </div>
@@ -200,7 +199,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="e.g. Ramesh Iyer"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-sand/30 dark:bg-espresso border border-forest/15 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-gold"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
                       />
                     </div>
 
@@ -214,7 +213,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="e.g. 9876543210"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-sand/30 dark:bg-espresso border border-forest/15 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-gold"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
                       />
                     </div>
                   </div>
@@ -228,7 +227,7 @@ export const ContactSection: React.FC = () => {
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-sand/30 dark:bg-espresso border border-forest/15 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-gold"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
                       />
                     </div>
 
@@ -239,7 +238,7 @@ export const ContactSection: React.FC = () => {
                       <select
                         value={time}
                         onChange={(e) => setTime(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-sand/30 dark:bg-espresso border border-forest/15 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-gold"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
                       >
                         <option value="08:00">08:00 AM (Breakfast)</option>
                         <option value="09:30">09:30 AM (Breakfast)</option>
@@ -260,7 +259,7 @@ export const ContactSection: React.FC = () => {
                         <select
                           value={guests}
                           onChange={(e) => setGuests(e.target.value)}
-                          className="w-full text-xs pl-9 pr-3.5 py-3 rounded-xl bg-sand/30 dark:bg-espresso border border-forest/15 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-gold"
+                          className="w-full text-xs pl-9 pr-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
                         >
                           <option value="1">1 Person</option>
                           <option value="2">2 Persons</option>
@@ -281,13 +280,13 @@ export const ContactSection: React.FC = () => {
                       placeholder="e.g. Birthday, Jain Food preferred, high chair needed"
                       value={occasion}
                       onChange={(e) => setOccasion(e.target.value)}
-                      className="w-full text-xs px-3.5 py-3 rounded-xl bg-sand/30 dark:bg-espresso border border-forest/15 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-gold"
+                      className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-2xl bg-forest dark:bg-gold text-cream dark:text-forest font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer group"
+                    className="w-full py-4 rounded-2xl bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream dark:bg-gold dark:text-forest font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg shadow-leaf/20 hover:shadow-xl flex items-center justify-center gap-2 cursor-pointer group border border-gold/30"
                   >
                     <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     <span>Confirm Reservation via WhatsApp</span>

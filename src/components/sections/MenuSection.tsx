@@ -47,13 +47,13 @@ export const MenuSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/15 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf dark:text-gold mb-3">
-            <span>Pure South Indian Menu</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold mb-3 shadow-sm">
+            <span>🌿 Pure South Indian Spread</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">
             Curated Artisanal Offerings
           </h2>
-          <p className="font-body text-sm sm:text-base text-forest/70 dark:text-cream/70 mt-2">
+          <p className="font-body text-sm sm:text-base text-forest/80 dark:text-cream/70 mt-2">
             Every dish is made to order. Slow-fermented batter, hand-roasted spices, zero artificial colors.
           </p>
         </div>
@@ -68,7 +68,7 @@ export const MenuSection: React.FC = () => {
               placeholder="Search crispy dosas, steamed idlis, filter kaapi, jain..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/80 dark:bg-espresso-card border border-forest/15 dark:border-gold/25 text-sm text-forest dark:text-cream placeholder-forest/40 dark:placeholder-cream/40 shadow-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
+              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/95 dark:bg-espresso-card border border-leaf/25 dark:border-gold/25 text-sm text-forest dark:text-cream placeholder-forest/40 dark:placeholder-cream/40 shadow-sm focus:outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/20"
             />
             {searchQuery && (
               <button
@@ -85,10 +85,10 @@ export const MenuSection: React.FC = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setFilterBestsellerOnly(!filterBestsellerOnly)}
-                className={`px-3 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer font-semibold ${
                   filterBestsellerOnly
                     ? 'bg-chilli text-cream border-chilli shadow-sm'
-                    : 'bg-white/60 dark:bg-espresso-card text-forest/70 dark:text-cream/70 border-forest/10 dark:border-gold/20'
+                    : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 border-leaf/20 dark:border-gold/20 hover:bg-leaf-tender'
                 }`}
               >
                 <Zap className="w-3.5 h-3.5" />
@@ -97,25 +97,25 @@ export const MenuSection: React.FC = () => {
 
               <button
                 onClick={() => setFilterJainOnly(!filterJainOnly)}
-                className={`px-3 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer ${
+                className={`px-3.5 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer font-semibold ${
                   filterJainOnly
-                    ? 'bg-leaf text-cream border-leaf shadow-sm'
-                    : 'bg-white/60 dark:bg-espresso-card text-forest/70 dark:text-cream/70 border-forest/10 dark:border-gold/20'
+                    ? 'bg-leaf-vibrant text-cream border-leaf-vibrant shadow-sm shadow-leaf/20'
+                    : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 border-leaf/20 dark:border-gold/20 hover:bg-leaf-tender'
                 }`}
               >
                 <Check className="w-3.5 h-3.5" />
-                <span>Jain Preparation Only</span>
+                <span>🌿 Jain Friendly Only</span>
               </button>
             </div>
 
-            <span className="text-forest/60 dark:text-cream/60">
+            <span className="text-forest/70 dark:text-cream/60 font-medium">
               Showing <strong>{filteredItems.length}</strong> items
             </span>
           </div>
         </div>
 
         {/* Sticky Category Tabs */}
-        <div className="sticky top-20 z-30 py-3 mb-8 bg-cream/90 dark:bg-espresso/90 backdrop-blur-md -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div className="sticky top-20 z-30 py-3 mb-8 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
             {menuData.categories.map((cat) => {
               const isActive = activeCategory === cat.id;
@@ -125,8 +125,8 @@ export const MenuSection: React.FC = () => {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-forest text-gold dark:bg-gold dark:text-forest shadow-md'
-                      : 'bg-white/60 dark:bg-espresso-card text-forest/70 dark:text-cream/70 hover:bg-sand/60 border border-forest/10 dark:border-gold/20'
+                      ? 'bg-gradient-to-r from-leaf to-forest text-cream dark:bg-gold dark:text-forest shadow-md shadow-leaf/20 border border-gold/30'
+                      : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 hover:bg-leaf-tender border border-leaf/20 dark:border-gold/20 shadow-sm'
                   }`}
                 >
                   {cat.name}
@@ -162,7 +162,7 @@ export const MenuSection: React.FC = () => {
             {filteredItems.map((dish) => (
               <div
                 key={dish.id}
-                className="group p-5 rounded-3xl bg-white/80 dark:bg-espresso-card border border-forest/10 dark:border-gold/20 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:border-gold/60"
+                className="group p-5 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/20 shadow-md shadow-leaf/5 hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:border-leaf"
               >
                 <div>
                   {/* Top Image + Badges */}
@@ -184,8 +184,8 @@ export const MenuSection: React.FC = () => {
 
                     {/* Jain indicator */}
                     {dish.isJain && (
-                      <span className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full bg-leaf text-cream text-[9px] font-bold tracking-wider uppercase shadow-md">
-                        Jain Opt.
+                      <span className="absolute top-2.5 right-2.5 px-2.5 py-0.5 rounded-full bg-leaf-vibrant text-cream text-[9px] font-bold tracking-wider uppercase shadow">
+                        🌿 Jain Opt.
                       </span>
                     )}
 
@@ -211,16 +211,16 @@ export const MenuSection: React.FC = () => {
 
                   {/* Title & Price Header */}
                   <div className="flex items-start justify-between gap-2 mb-1.5">
-                    <h3 className="font-display font-bold text-lg text-forest dark:text-cream group-hover:text-leaf dark:group-hover:text-gold transition-colors leading-snug">
+                    <h3 className="font-display font-bold text-lg text-forest dark:text-cream group-hover:text-leaf-vibrant dark:group-hover:text-gold transition-colors leading-snug">
                       {dish.name}
                     </h3>
-                    <span className="font-display font-black text-xl text-forest dark:text-gold shrink-0">
+                    <span className="font-display font-black text-xl text-leaf-vibrant dark:text-gold shrink-0">
                       ₹{dish.price}
                     </span>
                   </div>
 
                   {/* Description */}
-                  <p className="font-body text-xs text-forest/70 dark:text-cream/70 line-clamp-2 leading-relaxed mb-4">
+                  <p className="font-body text-xs text-forest/75 dark:text-cream/70 line-clamp-2 leading-relaxed mb-4">
                     {dish.description}
                   </p>
                 </div>
@@ -231,7 +231,7 @@ export const MenuSection: React.FC = () => {
                     {dish.tags?.slice(0, 2).map((t, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] px-2 py-0.5 rounded-md bg-forest/5 dark:bg-cream/5 text-forest/70 dark:text-cream/70 font-medium"
+                        className="text-[10px] px-2 py-0.5 rounded-md bg-leaf-tender/80 dark:bg-cream/5 text-forest/80 dark:text-cream/70 font-semibold border border-leaf/15"
                       >
                         {t}
                       </span>
@@ -240,7 +240,7 @@ export const MenuSection: React.FC = () => {
 
                   <button
                     onClick={() => addItem({ id: dish.id, name: dish.name, price: dish.price, image: dish.image, isJain: dish.isJain })}
-                    className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-forest dark:bg-gold hover:bg-leaf dark:hover:bg-gold-light text-cream dark:text-forest font-bold text-xs uppercase tracking-wider transition-all active:scale-95 cursor-pointer shadow-sm"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf dark:bg-gold dark:hover:bg-gold-light text-cream dark:text-forest font-bold text-xs uppercase tracking-wider transition-all active:scale-95 cursor-pointer shadow-sm shadow-leaf/20 border border-gold/30"
                   >
                     <Plus className="w-3.5 h-3.5" />
                     <span>Add</span>

@@ -13,33 +13,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreMenu, onBookT
       id="hero"
       className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-24 pb-12 sm:pb-20 overflow-hidden"
     >
-      {/* Background radial warmth & grain */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-leaf/10 dark:bg-gold/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-0 w-[30rem] h-[30rem] bg-gold/10 dark:bg-leaf/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Background botanical foliage gradients & warmth */}
+      <div className="absolute top-10 -left-20 w-[32rem] h-[32rem] bg-leaf/12 dark:bg-gold/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/3 right-0 w-[36rem] h-[36rem] bg-emerald-600/10 dark:bg-leaf/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-5 left-1/4 w-[28rem] h-[28rem] bg-amber-500/8 dark:bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Hero Typography & Actions (7 cols on lg) */}
+          {/* Left Column: Hero Typography & Actions (6 cols on lg) */}
           <div className="lg:col-span-6 z-10 flex flex-col items-start text-left space-y-6">
             
-            {/* Top Tag & Location Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sand dark:bg-espresso-card border border-forest/15 dark:border-gold/30 shadow-sm animate-fade-in">
-              <span className="flex h-2 w-2 relative">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-gold" />
-              </span>
-              <span className="text-xs font-semibold tracking-wider uppercase text-forest dark:text-cream">
-                Pimpri Chinchwad, Pune • Pure Veg
+            {/* Top Tag & Location Badge with Lush Greenery Pill */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-espresso-card border border-leaf/30 dark:border-gold/30 shadow-sm animate-fade-in">
+              <span className="text-sm">🌿</span>
+              <span className="text-xs font-bold tracking-wider uppercase text-forest dark:text-cream">
+                Pimpri Chinchwad, Pune • 100% Pure Veg Cafe
               </span>
             </div>
 
-            {/* Huge Fraunces Headline */}
-            <h1 className="font-display font-black text-4xl sm:text-6xl xl:text-7xl leading-[1.08] tracking-tight text-forest dark:text-cream">
+            {/* Huge Fraunces Headline with Rich Temple Green & Golden Accents */}
+            <h1 className="font-display font-black text-4xl sm:text-6xl xl:text-7xl leading-[1.06] tracking-tight text-forest dark:text-cream">
               The Art of{' '}
-              <span className="relative inline-block text-leaf dark:text-gold italic font-normal">
+              <span className="relative inline-block text-leaf-vibrant dark:text-gold italic font-normal">
                 Dosa
-                <span className="absolute left-0 -bottom-1 w-full h-[3px] bg-gold/60 rounded-full" />
+                <span className="absolute left-0 -bottom-1 w-full h-[3.5px] bg-gradient-to-r from-gold via-leaf to-gold rounded-full" />
               </span>{' '}
               &amp;{' '}
               <span className="relative inline-block text-forest dark:text-cream">
@@ -47,24 +45,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreMenu, onBookT
               </span>
             </h1>
 
-            {/* Story Subheading */}
-            <p className="font-body text-base sm:text-lg text-forest/75 dark:text-cream/80 max-w-xl leading-relaxed">
-              24-hour slow-fermented batter, hand-spread across searing cast-iron tawas, roasted in pure cow ghee, and served with freshly ground chutneys &amp; piping hot sambar.
+            {/* Story Subheading with Culinary Authenticity */}
+            <p className="font-body text-base sm:text-lg text-forest/85 dark:text-cream/80 max-w-xl leading-relaxed">
+              24-hour slow-fermented batter, hand-spread across searing cast-iron tawas, bathed in aromatic cow ghee, and served on fresh banana leaves with three stone-ground chutneys &amp; piping hot sambar.
             </p>
 
-            {/* Floating Highlights Badges */}
+            {/* Floating Highlights Badges in Lush Greenery Style */}
             <div className="flex flex-wrap gap-2.5 pt-1">
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/10 dark:border-gold/20 text-xs font-semibold text-forest dark:text-cream">
-                <ShieldCheck className="w-4 h-4 text-leaf dark:text-gold" />
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-xs font-bold text-forest dark:text-cream shadow-sm">
+                <ShieldCheck className="w-4 h-4 text-leaf-vibrant dark:text-gold" />
                 <span>100% Pure Veg</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/10 dark:border-gold/20 text-xs font-semibold text-forest dark:text-cream">
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-xs font-bold text-forest dark:text-cream shadow-sm">
                 <Flame className="w-4 h-4 text-chilli" />
-                <span>Fresh Chutneys Daily</span>
+                <span>Stone-Ground Chutneys</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/10 dark:border-gold/20 text-xs font-semibold text-forest dark:text-cream">
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-xs font-bold text-forest dark:text-cream shadow-sm">
                 <Clock className="w-4 h-4 text-copper dark:text-gold" />
-                <span>Open till 11:00 PM</span>
+                <span>Open 7 AM – 11 PM</span>
               </div>
             </div>
 
@@ -72,16 +70,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreMenu, onBookT
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-3 w-full sm:w-auto">
               <button
                 onClick={onExploreMenu}
-                className="btn-magnetic px-7 py-4 rounded-full bg-leaf hover:bg-forest text-cream font-bold text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2.5 cursor-pointer group"
+                className="btn-magnetic px-8 py-4 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-bold text-sm tracking-wider uppercase transition-all shadow-xl shadow-leaf/25 flex items-center justify-center gap-2.5 cursor-pointer group border border-gold/30"
               >
-                <Utensils className="w-4 h-4" />
+                <Utensils className="w-4 h-4 text-gold-light" />
                 <span>Explore Menu</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
               <button
                 onClick={onBookTable}
-                className="btn-magnetic px-7 py-4 rounded-full bg-transparent hover:bg-gold/15 text-forest dark:text-cream font-bold text-sm tracking-wider uppercase transition-all border-2 border-gold cursor-pointer flex items-center justify-center gap-2"
+                className="btn-magnetic px-8 py-4 rounded-full bg-white/90 hover:bg-leaf-tender dark:bg-transparent dark:hover:bg-gold/15 text-forest dark:text-cream font-bold text-sm tracking-wider uppercase transition-all border-2 border-gold cursor-pointer flex items-center justify-center gap-2 shadow-sm"
               >
                 <Sparkles className="w-4 h-4 text-gold" />
                 <span>Order / Book Table</span>

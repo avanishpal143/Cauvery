@@ -4,13 +4,13 @@
   "description": "Award-winning pure-veg South Indian cafe in Pimpri Chinchwad, Pune. Serving artisanal crispy dosas, cloud-soft idlis, and authentic degree filter coffee.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FBF5E8",
-  "theme_color": "#0F2E1D",
+  "background_color": "#FCFAF6",
+  "theme_color": "#2A1810",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/logo-removebg-preview.png",
+      "sizes": "500x500",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]

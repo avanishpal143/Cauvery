@@ -3,41 +3,41 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-forest: #0D351D;
-  --color-forest-dark: #072313;
-  --color-leaf: #237A3F;
-  --color-leaf-light: #349653;
-  --color-leaf-vibrant: #1E8746;
-  --color-leaf-tender: #EBF7EE;
-  --color-gold: #E8A72B;
-  --color-gold-light: #F7D788;
-  --color-gold-deep: #C78214;
+  --color-forest: #2A1810;
+  --color-forest-dark: #1A0E08;
+  --color-leaf: #2E7D32;
+  --color-leaf-light: #388E3C;
+  --color-leaf-vibrant: #2E7D32;
+  --color-leaf-tender: #EAF5EC;
+  --color-gold: #D99426;
+  --color-gold-light: #F3C367;
+  --color-gold-deep: #B87314;
   --color-copper: #BD7722;
   --color-chilli: #BF361B;
-  --color-cream: #FCF9F2;
-  --color-sand: #F4EEDF;
-  --color-sand-dark: #E6DCBF;
-  --color-espresso: #18110B;
-  --color-espresso-card: #241A12;
+  --color-cream: #FCFAF6;
+  --color-sand: #F5F1E8;
+  --color-sand-dark: #EAE3D2;
+  --color-espresso: #2A1810;
+  --color-espresso-card: #382217;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 :root {
-  /* Lush South Indian Banana-Leaf Cafe Light Theme */
-  --bg-page: #FAF8F2;
-  --text-main: #0C341D;
-  --text-muted: #245837;
-  --card-bg: rgba(255, 255, 255, 0.95);
-  --card-border: rgba(30, 135, 70, 0.22);
-  --accent-gold: #E8A72B;
-  --accent-leaf: #1E8746;
-  --banana-leaf: #27964C;
-  --banana-sprout: #EAF8EE;
-  --nav-glass: rgba(250, 248, 242, 0.95);
-  --vein-color: rgba(30, 135, 70, 0.3);
-  --banner-bg: #0D351D;
+  /* Official Cauvery Brand Identity Palette Extracted from Logo */
+  --bg-page: #FCFAF6;
+  --text-main: #2A1810;
+  --text-muted: #5A4335;
+  --card-bg: #FFFFFF;
+  --card-border: rgba(46, 125, 50, 0.18);
+  --accent-gold: #D99426;
+  --accent-leaf: #2E7D32;
+  --banana-leaf: #2E7D32;
+  --banana-sprout: #EAF5EC;
+  --nav-glass: rgba(252, 250, 246, 0.95);
+  --vein-color: rgba(46, 125, 50, 0.28);
+  --banner-bg: #2A1810;
 }
 
 /* ==========================================================================

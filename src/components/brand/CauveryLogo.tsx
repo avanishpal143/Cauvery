@@ -1,183 +1,130 @@
 import React from 'react';
 
 interface CauveryLogoProps {
-  variant?: 'horizontal' | 'stacked' | 'icon';
+  variant?: 'horizontal' | 'stacked' | 'icon' | 'badge';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   animated?: boolean;
   className?: string;
-  isLightText?: boolean; // When placed on dark backgrounds like the footer
+  isLightText?: boolean; // When placed on dark backgrounds
 }
 
 export const CauveryLogo: React.FC<CauveryLogoProps> = ({
   variant = 'horizontal',
-  animated = false,
+  size = 'md',
+  animated = true,
   className = '',
   isLightText = false,
 }) => {
-  // Gradients & Filters
-  const SvgDefs = (
-    <defs>
-      {/* Rich Golden Brass Gradient */}
-      <linearGradient id="cLogoGold" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#FFF2CC" />
-        <stop offset="35%" stopColor="#F5B935" />
-        <stop offset="70%" stopColor="#D89218" />
-        <stop offset="100%" stopColor="#FFE082" />
-      </linearGradient>
+  // Size presets for the official circular medallion
+  const sizeMap = {
+    sm: 'w-10 h-10',
+    md: 'w-12 h-12 sm:w-14 sm:h-14',
+    lg: 'w-16 h-16 sm:w-20 sm:h-20',
+    xl: 'w-24 h-24 sm:w-28 sm:h-28',
+  };
 
-      {/* Lush Green Leaves Gradient */}
-      <linearGradient id="cLogoLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#4ADE80" />
-        <stop offset="45%" stopColor="#16A34A" />
-        <stop offset="100%" stopColor="#14532D" />
-      </linearGradient>
+  const medallionSize = sizeMap[size];
 
-      {/* Tender Leaf Light Sprout */}
-      <linearGradient id="cLogoLeafSprout" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#86EFAC" />
-        <stop offset="100%" stopColor="#22C55E" />
-      </linearGradient>
-
-      {/* Deep Emerald Disc Gradient */}
-      <linearGradient id="cLogoDisc" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#0F3C22" />
-        <stop offset="100%" stopColor="#061A0E" />
-      </linearGradient>
-
-      {/* Soft Drop Shadow for Emblem */}
-      <filter id="cLogoShadow" x="-20%" y="-20%" width="140%" height="140%">
-        <feDropShadow dx="0" dy="1.5" stdDeviation="2" floodColor="#082814" floodOpacity="0.32" />
-      </filter>
-    </defs>
-  );
-
-  // Text color based on isLightText prop or page theme
-  const textColorClass = isLightText
-    ? 'text-[#FAF6EE]'
-    : 'text-forest dark:text-cream';
-
-  // 1. Icon-Only Emblem (Crisp Green Banana Leaves with Golden Ribs)
-  if (variant === 'icon') {
+  // 1. Icon / Badge Only (The official circular medallion)
+  if (variant === 'icon' || variant === 'badge') {
     return (
-      <svg
-        viewBox="0 0 72 72"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={`w-9 h-9 sm:w-10 sm:h-10 shrink-0 ${className} ${animated ? 'hover:scale-105 transition-transform duration-300' : ''}`}
-        aria-label="Cauvery Green Leaves Emblem"
+      <div
+        className={`relative inline-flex items-center justify-center select-none ${
+          isLightText ? 'bg-[#FCFAF6] rounded-full p-1 shadow-lg ring-2 ring-gold/40' : ''
+        } ${className}`}
       >
-        {SvgDefs}
-        
-        {/* Soft Circular Disc Base */}
-        <circle cx="36" cy="36" r="33.5" fill="url(#cLogoDisc)" stroke="url(#cLogoGold)" strokeWidth="1.8" filter="url(#cLogoShadow)" />
-        <circle cx="36" cy="36" r="30" fill="none" stroke="url(#cLogoGold)" strokeWidth="0.7" strokeDasharray="2 2.5" opacity="0.75" />
-
-        {/* Pair of Fresh Banana Leaves */}
-        {/* Secondary Back Leaf (Tender Green, angled) */}
-        <path
-          d="M36 44 C26 38, 22 26, 26 17 C34 16, 42 24, 38 38 Z"
-          fill="url(#cLogoLeafSprout)"
-          opacity="0.95"
+        <img
+          src="/logo-removebg-preview.png"
+          alt="Cauvery – The Art of Dosa & Idli"
+          className={`${medallionSize} object-contain ${
+            animated ? 'transition-transform duration-300 hover:scale-105' : ''
+          }`}
+          loading="eager"
         />
-        <path d="M28 20 Q33 28 36 38" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-
-        {/* Primary Lush Front Leaf */}
-        <path
-          d="M36 12 C47 16, 56 27, 52 44 C49 54, 40 61, 36 62 C32 61, 23 54, 20 44 C16 27, 25 16, 36 12 Z"
-          fill="url(#cLogoLeaf)"
-        />
-
-        {/* Golden Central Spine */}
-        <path d="M36 14 Q36 38 36 59" stroke="url(#cLogoGold)" strokeWidth="1.8" strokeLinecap="round" />
-
-        {/* Lateral Golden Leaf Veins */}
-        <path d="M36 24 Q44 28 48 33" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <path d="M36 24 Q28 28 24 33" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <path d="M36 35 Q45 39 47 46" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <path d="M36 35 Q27 39 25 46" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <path d="M36 46 Q42 49 44 54" stroke="url(#cLogoGold)" strokeWidth="0.9" strokeLinecap="round" />
-        <path d="M36 46 Q30 49 28 54" stroke="url(#cLogoGold)" strokeWidth="0.9" strokeLinecap="round" />
-
-        {/* Delicate Golden Crest Pip */}
-        <circle cx="36" cy="11.5" r="2.2" fill="url(#cLogoGold)" />
-      </svg>
+      </div>
     );
   }
 
-  // 2. Stacked Variant (Footer & Special Placements)
+  // 2. Stacked Variant (E.g. Preloader, Footer Center, Hero Showcase)
   if (variant === 'stacked') {
     return (
-      <div className={`flex flex-col items-center select-none ${className}`}>
-        {/* Green Leaves Emblem */}
-        <div className="relative mb-2">
-          <svg viewBox="0 0 72 72" fill="none" className="w-12 h-12" xmlns="http://www.w3.org/2000/svg">
-            {SvgDefs}
-            <circle cx="36" cy="36" r="33.5" fill="url(#cLogoDisc)" stroke="url(#cLogoGold)" strokeWidth="1.8" filter="url(#cLogoShadow)" />
-            <circle cx="36" cy="36" r="30" fill="none" stroke="url(#cLogoGold)" strokeWidth="0.7" strokeDasharray="2 2.5" opacity="0.75" />
-
-            {/* Leaves */}
-            <path d="M36 44 C26 38, 22 26, 26 17 C34 16, 42 24, 38 38 Z" fill="url(#cLogoLeafSprout)" opacity="0.95" />
-            <path d="M28 20 Q33 28 36 38" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-
-            <path
-              d="M36 12 C47 16, 56 27, 52 44 C49 54, 40 61, 36 62 C32 61, 23 54, 20 44 C16 27, 25 16, 36 12 Z"
-              fill="url(#cLogoLeaf)"
-            />
-            <path d="M36 14 Q36 38 36 59" stroke="url(#cLogoGold)" strokeWidth="1.8" strokeLinecap="round" />
-            <path d="M36 24 Q44 28 48 33" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-            <path d="M36 24 Q28 28 24 33" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-            <path d="M36 35 Q45 39 47 46" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-            <path d="M36 35 Q27 39 25 46" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-            <circle cx="36" cy="11.5" r="2.2" fill="url(#cLogoGold)" />
-          </svg>
+      <div className={`flex flex-col items-center text-center select-none ${className}`}>
+        <div
+          className={`relative mb-3 ${
+            isLightText ? 'bg-[#FCFAF6] rounded-full p-2 shadow-2xl ring-2 ring-gold/50' : ''
+          }`}
+        >
+          <img
+            src="/logo-removebg-preview.png"
+            alt="Cauvery – The Art of Dosa & Idli"
+            className={`${size === 'md' ? 'w-20 h-20 sm:w-24 sm:h-24' : medallionSize} object-contain ${
+              animated ? 'transition-transform duration-300 hover:scale-105' : ''
+            }`}
+            loading="eager"
+          />
         </div>
 
-        {/* Clean, Tasteful Name "Cauvery" in Small/Medium Proportions */}
-        <div className="flex items-center gap-1.5">
-          <span className={`font-display text-xl sm:text-2xl font-bold tracking-[0.12em] ${textColorClass}`}>
+        {/* Text accompaniment */}
+        <div className="flex flex-col items-center">
+          <span
+            className={`font-display font-black tracking-[0.14em] text-2xl sm:text-3xl ${
+              isLightText ? 'text-[#FCFAF6]' : 'text-espresso'
+            }`}
+          >
             Cauvery
           </span>
-          <span className="text-gold text-xs">✦</span>
+          <span
+            className={`font-display italic text-xs tracking-widest uppercase mt-0.5 ${
+              isLightText ? 'text-gold-light' : 'text-leaf-vibrant'
+            }`}
+          >
+            The Art of Dosa &amp; Idli
+          </span>
         </div>
       </div>
     );
   }
 
-  // 3. Horizontal Variant (Navbar / Header / Default)
+  // 3. Horizontal Variant (Navbar & Header Default)
   return (
-    <div className={`flex items-center gap-2.5 sm:gap-3 select-none ${className}`}>
-      {/* Green Leaves Emblem Icon */}
-      <svg
-        viewBox="0 0 72 72"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={`w-9 h-9 sm:w-10 sm:h-10 shrink-0 ${animated ? 'transition-transform duration-300 group-hover:scale-105' : ''}`}
+    <div className={`flex items-center gap-3 sm:gap-3.5 select-none group ${className}`}>
+      {/* Official Medallion Badge */}
+      <div
+        className={`relative shrink-0 flex items-center justify-center ${
+          isLightText
+            ? 'bg-[#FCFAF6] rounded-full p-1 shadow-md ring-2 ring-gold/40'
+            : 'bg-[#FCFAF6] rounded-full p-0.5 shadow-sm ring-1 ring-forest/10 hover:ring-leaf/40'
+        } transition-all`}
       >
-        {SvgDefs}
-        <circle cx="36" cy="36" r="33.5" fill="url(#cLogoDisc)" stroke="url(#cLogoGold)" strokeWidth="1.8" filter="url(#cLogoShadow)" />
-        <circle cx="36" cy="36" r="30" fill="none" stroke="url(#cLogoGold)" strokeWidth="0.7" strokeDasharray="2 2.5" opacity="0.75" />
-
-        {/* Leaves */}
-        <path d="M36 44 C26 38, 22 26, 26 17 C34 16, 42 24, 38 38 Z" fill="url(#cLogoLeafSprout)" opacity="0.95" />
-        <path d="M28 20 Q33 28 36 38" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-
-        <path
-          d="M36 12 C47 16, 56 27, 52 44 C49 54, 40 61, 36 62 C32 61, 23 54, 20 44 C16 27, 25 16, 36 12 Z"
-          fill="url(#cLogoLeaf)"
+        <img
+          src="/logo-removebg-preview.png"
+          alt="Cauvery – The Art of Dosa & Idli"
+          className={`${medallionSize} object-contain ${
+            animated ? 'transition-transform duration-300 group-hover:scale-105' : ''
+          }`}
+          loading="eager"
         />
-        <path d="M36 14 Q36 38 36 59" stroke="url(#cLogoGold)" strokeWidth="1.8" strokeLinecap="round" />
-        <path d="M36 24 Q44 28 48 33" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <path d="M36 24 Q28 28 24 33" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <path d="M36 35 Q45 39 47 46" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <path d="M36 35 Q27 39 25 46" stroke="url(#cLogoGold)" strokeWidth="1" strokeLinecap="round" />
-        <circle cx="36" cy="11.5" r="2.2" fill="url(#cLogoGold)" />
-      </svg>
+      </div>
 
-      {/* Clean, Refined Name "Cauvery" (Small/Medium, Tasteful, Elegant Serif) */}
-      <div className="flex items-center gap-1.5">
-        <span className={`font-display text-lg sm:text-xl font-bold tracking-[0.08em] ${textColorClass}`}>
-          Cauvery
+      {/* Brand Typography */}
+      <div className="flex flex-col justify-center leading-none">
+        <div className="flex items-center gap-1.5">
+          <span
+            className={`font-display font-black text-xl sm:text-2xl tracking-[0.08em] ${
+              isLightText ? 'text-[#FCFAF6]' : 'text-espresso'
+            }`}
+          >
+            Cauvery
+          </span>
+          <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0 inline-block" />
+        </div>
+        <span
+          className={`text-[10px] sm:text-[11px] font-medium tracking-[0.18em] uppercase mt-1 font-body ${
+            isLightText ? 'text-gold-light/90' : 'text-leaf-vibrant font-semibold'
+          }`}
+        >
+          The Art of Dosa &amp; Idli
         </span>
-        <span className="w-1.5 h-1.5 rounded-full bg-gold inline-block" />
       </div>
     </div>
   );

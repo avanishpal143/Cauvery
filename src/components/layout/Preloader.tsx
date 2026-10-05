@@ -38,76 +38,45 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center max-w-sm px-6 text-center">
-        {/* Animated Leaf SVG Stroke Draw */}
-        <div className="relative w-24 h-24 mb-6">
-          <svg
-            viewBox="0 0 100 100"
-            className="w-full h-full"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            {/* Outer Circle Ring */}
+        {/* Official Brand Logo with Animated Golden Progress Ring */}
+        <div className="relative w-36 h-36 sm:w-40 sm:h-40 mx-auto mb-5 flex items-center justify-center">
+          {/* Radial Warm Glow behind logo */}
+          <div className="absolute inset-0 bg-gold/15 rounded-full blur-xl animate-pulse" />
+
+          {/* SVG Progress Ring */}
+          <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
+            {/* Background Ring Track */}
             <circle
               cx="50"
               cy="50"
-              r="45"
-              stroke="#E8B04B"
+              r="46"
+              stroke="rgba(217, 148, 38, 0.2)"
               strokeWidth="2"
-              strokeDasharray="283"
-              strokeDashoffset={283 - (283 * progress) / 100}
-              className="transition-all duration-300 ease-out"
+              fill="none"
             />
-
-            {/* Banana Leaf Outline Stroke */}
-            <path
-              d="M50 20 C 65 24, 76 40, 72 58 C 69 70, 56 80, 50 82 C 44 80, 31 70, 28 58 C 24 40, 35 24, 50 20 Z"
-              stroke="#448F59"
+            {/* Active Drawing Ring */}
+            <circle
+              cx="50"
+              cy="50"
+              r="46"
+              stroke="#D99426"
               strokeWidth="2.5"
-              strokeDasharray="220"
-              strokeDashoffset={220 - (220 * progress) / 100}
-              fill="rgba(47, 107, 63, 0.25)"
-              className="transition-all duration-300 ease-out"
-            />
-
-            {/* Leaf Vein Stem */}
-            <path
-              d="M50 24 Q 50 50 50 80"
-              stroke="#E8B04B"
-              strokeWidth="2"
+              strokeDasharray="289"
+              strokeDashoffset={289 - (289 * progress) / 100}
               strokeLinecap="round"
-              strokeDasharray="60"
-              strokeDashoffset={60 - (60 * progress) / 100}
-            />
-
-            {/* Lateral Veins */}
-            <path
-              d="M50 38 Q 62 42 66 48"
-              stroke="#FCE196"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeDasharray="20"
-              strokeDashoffset={20 - (20 * progress) / 100}
-            />
-            <path
-              d="M50 38 Q 38 42 34 48"
-              stroke="#FCE196"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeDasharray="20"
-              strokeDashoffset={20 - (20 * progress) / 100}
+              fill="none"
+              className="transition-all duration-200 ease-out"
             />
           </svg>
-        </div>
 
-        {/* Wordmark with Sprouting Foliage */}
-        <div className="relative flex items-center justify-center mb-2">
-          <span className="font-display text-3xl sm:text-4xl font-black tracking-[0.2em] text-cream leading-none">
-            CAUVER
-          </span>
-          <span className="relative font-display text-3xl sm:text-4xl font-black text-cream leading-none">
-            Y
-            <span className="absolute -top-2 -right-3 text-xs text-gold animate-bounce">✦</span>
-          </span>
+          {/* Official Circular Logo Badge */}
+          <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#FCFAF6] p-1 shadow-2xl flex items-center justify-center ring-2 ring-gold/40">
+            <img
+              src="/logo-removebg-preview.png"
+              alt="Cauvery – The Art of Dosa & Idli"
+              className="w-full h-full object-contain"
+            />
+          </div>
         </div>
 
         <div className="flex items-center gap-2.5 w-full justify-center mb-6">

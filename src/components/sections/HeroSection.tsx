@@ -1,5 +1,6 @@
 import React from 'react';
-import { Hero3DScene } from '../canvas/Hero3DScene';
+import { HeroPlatterShowcase } from './HeroPlatterShowcase';
+import { HeroAnimatedBackground } from './HeroAnimatedBackground';
 import { Sparkles, ArrowRight, Utensils, ShieldCheck, Clock, Flame } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -13,12 +14,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreMenu, onBookT
       id="hero"
       className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-24 pb-12 sm:pb-20 overflow-hidden"
     >
-      {/* Background botanical foliage gradients & warmth */}
-      <div className="absolute top-10 -left-20 w-[32rem] h-[32rem] bg-leaf/12 dark:bg-gold/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/3 right-0 w-[36rem] h-[36rem] bg-emerald-600/10 dark:bg-leaf/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-5 left-1/4 w-[28rem] h-[28rem] bg-amber-500/8 dark:bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Animated South Indian Cafe Background with floating elements, Kolam geometry, and warm bokeh */}
+      <HeroAnimatedBackground />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Hero Typography & Actions (6 cols on lg) */}
@@ -113,15 +112,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreMenu, onBookT
 
           </div>
 
-          {/* Right Column: 3D Canvas Experience (6 cols on lg) */}
-          <div className="lg:col-span-6 relative flex items-center justify-center">
-            {/* Ambient circular frame decoration */}
-            <div className="absolute inset-0 max-w-md max-h-md mx-auto rounded-full border border-gold/20 -z-10 animate-spin-slow pointer-events-none" />
-            
-            {/* The 3D Scene */}
-            <div className="w-full h-[400px] sm:h-[480px] lg:h-[550px] relative">
-              <Hero3DScene />
-            </div>
+          {/* Right Column: Realistic Interactive Feast Platter Showcase */}
+          <div className="lg:col-span-6 relative flex items-center justify-center py-4">
+            <HeroPlatterShowcase />
           </div>
 
         </div>

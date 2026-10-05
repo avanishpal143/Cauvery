@@ -43,8 +43,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" className="group">
-            <CauveryLogo variant="horizontal" animated className="transition-transform group-hover:scale-[1.02]" />
+          <a href="#hero" className="group flex items-center focus:outline-none" aria-label="Cauvery">
+            <CauveryLogo variant="navbar" animated className="transition-transform group-hover:scale-105" />
           </a>
 
           {/* Desktop Nav Links */}

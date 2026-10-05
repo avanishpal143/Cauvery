@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Big Wordmark & Brand Personality (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <CauveryLogo variant="horizontal" isLightText={true} animated={true} />
+            <CauveryLogo variant="footer" isLightText={true} animated={true} />
             
             <p className="font-body text-xs sm:text-sm text-cream/80 max-w-sm leading-relaxed mt-4">
               Celebrating the golden crispness of slow-fermented dosas, jasmine-soft idlis, and brass-tumbler degree filter kaapi in the heart of Pimpri Chinchwad, Pune.

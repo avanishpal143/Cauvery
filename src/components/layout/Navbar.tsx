@@ -35,8 +35,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-[#E2F2E6] dark:bg-espresso border-b border-leaf/25 dark:border-gold/20 shadow-sm shadow-leaf/10 ${
-          isScrolled ? 'py-2.5 sm:py-3 shadow-md' : 'py-3.5 sm:py-4'
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-[#82CE92] dark:bg-espresso border-b border-[#237A3F]/35 dark:border-gold/20 shadow-md shadow-[#237A3F]/15 ${
+          isScrolled ? 'py-2.5 sm:py-3 shadow-lg' : 'py-3.5 sm:py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden px-4 pt-3 pb-6 bg-[#E2F2E6] dark:bg-espresso border-b border-leaf/25 dark:border-gold/20 shadow-xl animate-in slide-in-from-top duration-300">
+          <div className="lg:hidden px-4 pt-3 pb-6 bg-[#82CE92] dark:bg-espresso border-b border-[#237A3F]/35 dark:border-gold/20 shadow-xl animate-in slide-in-from-top duration-300">
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <a

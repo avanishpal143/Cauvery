@@ -35,33 +35,25 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-in-out pointer-events-none ${
-          isScrolled ? 'pt-2.5 sm:pt-4 px-3 sm:px-6 md:px-8' : 'pt-0 px-0'
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+          isScrolled
+            ? 'py-3 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md shadow-md shadow-forest/5 border-b border-leaf/15 dark:border-gold/20'
+            : 'py-5 bg-transparent'
         }`}
       >
-        <div
-          className={`mx-auto transition-all duration-500 ease-in-out pointer-events-auto flex items-center justify-between ${
-            isScrolled
-              ? 'max-w-5xl lg:max-w-6xl rounded-full bg-[#B8E2BF]/95 dark:bg-espresso/95 backdrop-blur-md border border-[#2E7D32]/35 dark:border-gold/30 shadow-xl shadow-[#2E7D32]/20 py-2 sm:py-2.5 px-4 sm:px-6'
-              : 'max-w-full rounded-none bg-[#B8E2BF] dark:bg-espresso border-b border-[#2E7D32]/25 dark:border-gold/20 shadow-sm py-3.5 sm:py-4 px-4 sm:px-6 lg:px-8'
-          }`}
-        >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="group flex items-center focus:outline-none" aria-label="Cauvery">
-            <CauveryLogo
-              variant="navbar"
-              animated
-              className={`transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}
-            />
+            <CauveryLogo variant="navbar" animated className="transition-transform group-hover:scale-105" />
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 shadow-sm backdrop-blur-sm">
+          <nav className="hidden lg:flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/80 dark:bg-cream/5 border border-leaf/20 dark:border-gold/15 shadow-sm backdrop-blur-sm">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3.5 py-1.5 text-[13px] font-extrabold tracking-wider uppercase text-forest dark:text-cream/90 hover:text-leaf-vibrant dark:hover:text-gold rounded-full transition-all hover:bg-leaf-tender/80 dark:hover:bg-cream/10 active:scale-95"
+                className="px-3.5 py-1.5 text-xs font-bold tracking-wider uppercase text-forest/90 dark:text-cream/80 hover:text-leaf-vibrant dark:hover:text-gold rounded-full transition-colors hover:bg-leaf-tender dark:hover:bg-cream/10"
               >
                 {link.label}
               </a>
@@ -71,24 +63,40 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
           {/* Right Action Icons & Badges */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Live Open/Closed indicator */}
-            <div className="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-cream/10 border border-leaf/30 dark:border-gold/30 text-xs font-extrabold text-forest dark:text-cream/90 shadow-xs">
+            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-[11px] font-semibold">
               <span
-                className={`w-2.5 h-2.5 rounded-full ${
-                  isOpen ? 'bg-emerald-600 animate-pulse ring-2 ring-emerald-300' : 'bg-red-500'
+                className={`w-2 h-2 rounded-full ${
+                  isOpen ? 'bg-emerald-600 animate-pulse' : 'bg-red-500'
                 }`}
               />
-              <span className="tracking-wide">{statusText}</span>
+              <span className="text-forest dark:text-cream/90">{statusText}</span>
+            </div>
+
+            {/* Theme Toggle Button (Preserved in comments as requested)
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full text-forest hover:bg-leaf-tender transition-colors cursor-pointer border border-leaf/20 bg-white/70 shadow-sm"
+              aria-label="Toggle Dark/Light Mode"
+            >
+              <Moon className="w-4 h-4 text-forest" />
+            </button>
+            */}
+
+            {/* Fresh Banana Leaf Cafe Badge */}
+            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-forest text-xs font-bold shadow-sm">
+              <span className="text-sm">🍃</span>
+              <span className="text-[11px] text-leaf font-bold uppercase tracking-wider">Banana Leaf</span>
             </div>
 
             {/* WhatsApp Cart Trigger */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2.5 sm:p-3 rounded-full bg-white/95 dark:bg-cream/10 hover:bg-white text-forest dark:text-cream transition-all cursor-pointer border border-leaf/30 dark:border-gold/30 shadow-xs hover:shadow-md hover:scale-105 active:scale-95"
+              className="relative p-2.5 rounded-full bg-white/90 dark:bg-cream/10 hover:bg-leaf-tender text-forest dark:text-cream transition-all cursor-pointer border border-leaf/20 dark:border-gold/30 shadow-sm"
               aria-label="View Cart"
             >
-              <ShoppingBag className="w-5 h-5 text-leaf-vibrant dark:text-gold stroke-[2.2]" />
+              <ShoppingBag className="w-4 h-4 text-leaf-vibrant dark:text-cream" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-chilli text-cream text-[11px] font-extrabold flex items-center justify-center shadow-md animate-bounce">
+                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-chilli text-cream text-[10px] font-bold flex items-center justify-center shadow-md animate-bounce">
                   {totalItems}
                 </span>
               )}
@@ -97,41 +105,50 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
             {/* Table Booking CTA */}
             <button
               onClick={onBookTableClick}
-              className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-extrabold text-[13px] tracking-wider uppercase transition-all shadow-md shadow-forest/20 hover:shadow-xl cursor-pointer transform hover:-translate-y-0.5 active:scale-95 border border-gold/50"
+              className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-bold text-xs tracking-wider uppercase transition-all shadow-md shadow-forest/15 hover:shadow-lg cursor-pointer transform hover:-translate-y-0.5 border border-gold/40"
             >
-              <Calendar className="w-4 h-4 text-gold-light stroke-[2.2]" />
+              <Calendar className="w-3.5 h-3.5 text-gold-light" />
               <span>Book Table</span>
             </button>
 
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2.5 rounded-full text-forest dark:text-cream bg-white/85 dark:bg-cream/10 hover:bg-white border border-leaf/25 shadow-xs transition-all cursor-pointer active:scale-95"
+              className="lg:hidden p-2 rounded-full text-forest dark:text-cream hover:bg-forest/10 dark:hover:bg-cream/10 transition-colors cursor-pointer"
               aria-label="Toggle Menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6 stroke-[2.2]" /> : <MenuIcon className="w-6 h-6 stroke-[2.2]" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div
-            className={`lg:hidden pointer-events-auto mx-auto mt-2 px-4 pt-3 pb-6 bg-[#B8E2BF] dark:bg-espresso border border-[#2E7D32]/30 dark:border-gold/20 shadow-2xl animate-in slide-in-from-top duration-300 ${
-              isScrolled ? 'max-w-5xl rounded-3xl' : 'rounded-b-2xl max-w-full'
-            }`}
-          >
+          <div className="lg:hidden px-4 pt-3 pb-6 bg-cream dark:bg-espresso border-b border-forest/10 dark:border-gold/20 shadow-xl animate-in slide-in-from-top duration-300">
             <div className="flex flex-col space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-2.5 rounded-xl text-[15px] font-extrabold tracking-wide text-forest dark:text-cream hover:bg-white/70 transition-colors"
+                  className="px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide text-forest dark:text-cream hover:bg-sand dark:hover:bg-forest-dark transition-colors"
                 >
                   {link.label}
                 </a>
               ))}
+
+              {/* Mobile Theme Toggle Button preserved in comments as requested:
+              <button
+                onClick={toggleTheme}
+                className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide text-forest hover:bg-sand transition-colors cursor-pointer text-left"
+              >
+                <span>Theme / Appearance</span>
+                <span className="flex items-center gap-1.5 text-xs text-copper font-bold bg-forest/5 px-2.5 py-1 rounded-full">
+                  <Moon className="w-3.5 h-3.5 text-forest" />
+                  <span>Light Mode</span>
+                </span>
+              </button>
+              */}
 
               <div className="pt-3 border-t border-forest/10 dark:border-cream/10 flex items-center gap-3">
                 <button
@@ -139,7 +156,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
                     setMobileMenuOpen(false);
                     onBookTableClick();
                   }}
-                  className="flex-1 py-3 rounded-xl bg-gradient-to-r from-leaf to-forest text-cream font-extrabold text-xs uppercase tracking-wider text-center shadow-md cursor-pointer border border-gold/40"
+                  className="flex-1 py-3 rounded-xl bg-gold text-forest font-bold text-xs uppercase tracking-wider text-center shadow-md cursor-pointer"
                 >
                   Book Table / Order
                 </button>

@@ -51,16 +51,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreMenu, onBookT
 
             {/* Floating Highlights Badges in Lush Greenery Style */}
             <div className="flex flex-wrap gap-2.5 pt-1">
-              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-xs font-bold text-forest dark:text-cream shadow-sm">
-                <ShieldCheck className="w-4 h-4 text-leaf-vibrant dark:text-gold" />
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-xs font-bold text-forest shadow-sm">
+                <span className="text-sm">🍃</span>
+                <span>Served on Fresh Banana Leaf</span>
+              </div>
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-leaf/25 text-xs font-bold text-forest shadow-sm">
+                <ShieldCheck className="w-4 h-4 text-leaf-vibrant" />
                 <span>100% Pure Veg</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-xs font-bold text-forest dark:text-cream shadow-sm">
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-leaf/25 text-xs font-bold text-forest shadow-sm">
                 <Flame className="w-4 h-4 text-chilli" />
                 <span>Stone-Ground Chutneys</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-cream/5 border border-leaf/25 dark:border-gold/20 text-xs font-bold text-forest dark:text-cream shadow-sm">
-                <Clock className="w-4 h-4 text-copper dark:text-gold" />
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-leaf/25 text-xs font-bold text-forest shadow-sm">
+                <Clock className="w-4 h-4 text-copper" />
                 <span>Open 7 AM – 11 PM</span>
               </div>
             </div>

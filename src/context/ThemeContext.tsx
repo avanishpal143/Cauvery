@@ -11,20 +11,21 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('cauvery-theme');
-      if (stored === 'light' || stored === 'dark') return stored;
-      // Default to light theme as primary brand experience, or check system
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'light';
-  });
+  // Always default to Light Theme (Banana Leaf & Cream cafe experience)
+  // Note: Dark mode is preserved in comments below as requested by user
+  const [theme, setThemeState] = useState<Theme>('light');
 
   useEffect(() => {
     const root = document.documentElement;
     const body = document.body;
 
+    // Enforce pure light theme
+    root.classList.remove('dark');
+    body.classList.remove('dark');
+    root.style.colorScheme = 'light';
+    localStorage.setItem('cauvery-theme', 'light');
+
+    /* === DARK THEME PRESERVED IN COMMENTS ===
     if (theme === 'dark') {
       root.classList.add('dark');
       body.classList.add('dark');
@@ -34,16 +35,19 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       body.classList.remove('dark');
       root.style.colorScheme = 'light';
     }
-
     localStorage.setItem('cauvery-theme', theme);
+    ======================================== */
   }, [theme]);
 
   const toggleTheme = () => {
+    /* === Dark toggle preserved in comments ===
     setThemeState((prev) => (prev === 'light' ? 'dark' : 'light'));
+    =========================================== */
+    setThemeState('light');
   };
 
-  const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
+  const setTheme = (_newTheme: Theme) => {
+    setThemeState('light');
   };
 
   return (

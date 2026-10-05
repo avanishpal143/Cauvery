@@ -93,14 +93,15 @@ export const SignatureDishes: React.FC = () => {
         {/* Header with Navigation Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-tender/90 dark:bg-cream/5 border border-leaf/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold mb-3 shadow-sm">
-              <span>🌿 Crowning Delicacies</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-300 text-xs font-bold uppercase tracking-widest text-leaf-vibrant mb-3 shadow-sm">
+              <span className="text-sm">🍃</span>
+              <span>Banana Leaf Specialties • Crowning Delicacies</span>
             </div>
-            <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">
+            <h2 className="font-display font-black text-3xl sm:text-5xl text-forest leading-tight">
               Our Signature Delights
             </h2>
-            <p className="font-body text-sm sm:text-base text-forest/80 dark:text-cream/70 mt-2 max-w-xl">
-              Five legendary items that people travel from across Pune and PCMC to experience. Slow fermented, pure ghee roasted.
+            <p className="font-body text-sm sm:text-base text-forest/80 mt-2 max-w-xl">
+              Five legendary items served authentically on fresh green banana leaves. Slow fermented, pure cow ghee roasted.
             </p>
           </div>
 

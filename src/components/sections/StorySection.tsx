@@ -113,22 +113,30 @@ export const StorySection: React.FC = () => {
               </p>
 
               {/* Quality Checklist */}
-              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-forest/10 dark:border-cream/10">
-                <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 border-t border-forest/10">
+                <div className="flex items-center gap-2 text-xs font-semibold text-forest">
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant shrink-0" />
                   <span>Zero Chemicals / Soda</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
+                <div className="flex items-center gap-2 text-xs font-semibold text-forest">
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant shrink-0" />
                   <span>A2 Desi Cow Ghee</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
+                <div className="flex items-center gap-2 text-xs font-semibold text-forest">
+                  <span className="text-sm">🍃</span>
+                  <span>Fresh Banana Leaf Dining</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-semibold text-forest">
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant shrink-0" />
                   <span>Granite Stone Grinding</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs font-semibold text-forest dark:text-cream">
-                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant dark:text-gold shrink-0" />
+                <div className="flex items-center gap-2 text-xs font-semibold text-forest">
+                  <CheckCircle2 className="w-4 h-4 text-leaf-vibrant shrink-0" />
                   <span>Cast-Iron Tawa Searing</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs font-semibold text-forest">
+                  <span className="text-sm">🌿</span>
+                  <span>Daily Stone Chutneys</span>
                 </div>
               </div>
             </div>

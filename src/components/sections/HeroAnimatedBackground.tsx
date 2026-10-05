@@ -85,21 +85,33 @@ export const HeroAnimatedBackground: React.FC = () => {
         </div>
       </div>
 
-      {/* Element 4: Floating Fresh Curry Leaves Drift */}
+      {/* Element 4: Floating Fresh Banana & Curry Leaves Drift */}
       <div
-        className="absolute top-1/3 left-[20%] text-emerald-500 opacity-60 text-lg hidden sm:block"
+        className="absolute top-1/4 left-[18%] text-emerald-600 opacity-70 text-2xl hidden sm:block select-none"
         style={{ animation: 'floatLeaf 9s ease-in-out infinite' }}
-      >
-        🌿
-      </div>
-      <div
-        className="absolute bottom-1/3 right-[32%] text-emerald-500 opacity-55 text-base hidden sm:block"
-        style={{ animation: 'floatLeaf 11s ease-in-out infinite 2s' }}
       >
         🍃
       </div>
       <div
-        className="absolute top-2/3 right-[12%] text-chilli opacity-50 text-sm hidden sm:block"
+        className="absolute bottom-1/4 right-[28%] text-emerald-600 opacity-65 text-xl hidden sm:block select-none"
+        style={{ animation: 'floatLeaf 11s ease-in-out infinite 2s' }}
+      >
+        🌿
+      </div>
+      <div
+        className="absolute top-2/3 left-[8%] text-emerald-500 opacity-60 text-lg hidden sm:block select-none"
+        style={{ animation: 'floatLeaf 8.5s ease-in-out infinite 1.2s' }}
+      >
+        🍃
+      </div>
+      <div
+        className="absolute top-1/2 right-[6%] text-emerald-600 opacity-60 text-xl hidden sm:block select-none"
+        style={{ animation: 'floatLeaf 10s ease-in-out infinite 3s' }}
+      >
+        🌿
+      </div>
+      <div
+        className="absolute top-3/4 right-[15%] text-chilli opacity-50 text-sm hidden sm:block select-none"
         style={{ animation: 'floatLeaf 8s ease-in-out infinite 3.5s' }}
       >
         🌶️

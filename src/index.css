@@ -26,20 +26,25 @@
 
 :root {
   /* Lush South Indian Banana-Leaf Cafe Light Theme */
-  --bg-page: #FBF8F1;
-  --text-main: #0B311B;
-  --text-muted: #3F614C;
-  --card-bg: rgba(255, 255, 255, 0.92);
-  --card-border: rgba(35, 122, 63, 0.18);
+  --bg-page: #FAF8F2;
+  --text-main: #0C341D;
+  --text-muted: #245837;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --card-border: rgba(30, 135, 70, 0.22);
   --accent-gold: #E8A72B;
-  --accent-leaf: #237A3F;
-  --nav-glass: rgba(251, 248, 241, 0.92);
-  --vein-color: rgba(35, 122, 63, 0.28);
-  --banner-bg: #0E3A20;
+  --accent-leaf: #1E8746;
+  --banana-leaf: #27964C;
+  --banana-sprout: #EAF8EE;
+  --nav-glass: rgba(250, 248, 242, 0.95);
+  --vein-color: rgba(30, 135, 70, 0.3);
+  --banner-bg: #0D351D;
 }
 
+/* ==========================================================================
+   DARK THEME PRESERVED IN COMMENTS
+   User loved the look, kept preserved so it can be restored anytime by uncommenting:
+   
 .dark {
-  /* Rich Espresso & Roasted Chicory Night Cafe */
   --bg-page: #18110B;
   --text-main: #FCF9F2;
   --text-muted: #BDB2A6;
@@ -51,6 +56,7 @@
   --vein-color: rgba(232, 167, 43, 0.25);
   --banner-bg: #100B07;
 }
+========================================================================== */
 
 /* Base resets & typography */
 html {

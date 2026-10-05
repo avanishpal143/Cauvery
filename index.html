@@ -76,18 +76,19 @@
     }
     </script>
 
-    <!-- Early Theme Initializer -->
+    <!-- Early Theme Initializer (Default to Light Banana Leaf Cafe) -->
     <script>
       (function() {
         try {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.style.colorScheme = 'light';
+          /* Dark theme check preserved in comments:
           var stored = localStorage.getItem('cauvery-theme');
           if (stored === 'dark') {
             document.documentElement.classList.add('dark');
             document.documentElement.style.colorScheme = 'dark';
-          } else {
-            document.documentElement.classList.remove('dark');
-            document.documentElement.style.colorScheme = 'light';
           }
+          */
         } catch (e) {}
       })();
     </script>

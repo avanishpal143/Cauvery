@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { CauveryLogo } from '../brand/CauveryLogo';
-import { useTheme } from '../../hooks/useTheme';
 import { useOpenNow } from '../../hooks/useOpenNow';
 import { useCart } from '../../context/CartContext';
-import { Sun, Moon, ShoppingBag, Menu as MenuIcon, X, Phone, Calendar } from 'lucide-react';
+import { ShoppingBag, Menu as MenuIcon, X, Phone, Calendar } from 'lucide-react';
 
 interface NavbarProps {
   onBookTableClick: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
-  const { theme, toggleTheme } = useTheme();
   const { isOpen, statusText } = useOpenNow();
   const { totalItems, setIsCartOpen } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -74,19 +72,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
               <span className="text-forest dark:text-cream/90">{statusText}</span>
             </div>
 
-            {/* Dark / Light Mode Toggle */}
+            {/* Theme Toggle Button (Preserved in comments as requested)
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full text-forest dark:text-cream hover:bg-leaf-tender dark:hover:bg-cream/10 transition-colors cursor-pointer border border-leaf/20 dark:border-gold/30 bg-white/70 dark:bg-transparent shadow-sm"
+              className="p-2 rounded-full text-forest hover:bg-leaf-tender transition-colors cursor-pointer border border-leaf/20 bg-white/70 shadow-sm"
               aria-label="Toggle Dark/Light Mode"
-              title={theme === 'dark' ? 'Switch to Light' : 'Switch to Dark'}
             >
-              {theme === 'dark' ? (
-                <Sun className="w-4 h-4 text-gold hover:rotate-45 transition-transform" />
-              ) : (
-                <Moon className="w-4 h-4 text-forest hover:-rotate-12 transition-transform" />
-              )}
+              <Moon className="w-4 h-4 text-forest" />
             </button>
+            */}
+
+            {/* Fresh Banana Leaf Cafe Badge */}
+            <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-300 text-forest text-xs font-bold shadow-sm">
+              <span className="text-sm">🍃</span>
+              <span className="text-[11px] text-leaf font-bold uppercase tracking-wider">Banana Leaf</span>
+            </div>
 
             {/* WhatsApp Cart Trigger */}
             <button
@@ -137,17 +137,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookTableClick }) => {
                 </a>
               ))}
 
-              {/* Mobile Theme Toggle Button */}
+              {/* Mobile Theme Toggle Button preserved in comments as requested:
               <button
                 onClick={toggleTheme}
-                className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide text-forest dark:text-cream hover:bg-sand dark:hover:bg-forest-dark transition-colors cursor-pointer text-left"
+                className="flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-semibold tracking-wide text-forest hover:bg-sand transition-colors cursor-pointer text-left"
               >
                 <span>Theme / Appearance</span>
-                <span className="flex items-center gap-1.5 text-xs text-copper dark:text-gold font-bold bg-forest/5 dark:bg-cream/10 px-2.5 py-1 rounded-full">
-                  {theme === 'dark' ? <Sun className="w-3.5 h-3.5 text-gold" /> : <Moon className="w-3.5 h-3.5 text-forest" />}
-                  {theme === 'dark' ? 'Dark Mode' : 'Light Mode'}
+                <span className="flex items-center gap-1.5 text-xs text-copper font-bold bg-forest/5 px-2.5 py-1 rounded-full">
+                  <Moon className="w-3.5 h-3.5 text-forest" />
+                  <span>Light Mode</span>
                 </span>
               </button>
+              */}
 
               <div className="pt-3 border-t border-forest/10 dark:border-cream/10 flex items-center gap-3">
                 <button

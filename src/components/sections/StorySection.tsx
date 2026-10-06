@@ -90,7 +90,7 @@ export const StorySection: React.FC = () => {
             </div>
 
             {/* Active Story Card */}
-            <div className="p-8 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/25 shadow-xl shadow-leaf/5 transition-all duration-300">
+            <div className="p-8 rounded-3xl bg-white dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-xl shadow-leaf/5 transition-all duration-300">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono font-bold tracking-widest uppercase text-leaf-vibrant dark:text-gold flex items-center gap-1.5">
                   <span>🌿</span>

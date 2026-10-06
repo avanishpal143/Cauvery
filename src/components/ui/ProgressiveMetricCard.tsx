@@ -76,7 +76,7 @@ export const ProgressiveMetricCard: React.FC<ProgressiveMetricProps> = ({
   return (
     <div
       ref={cardRef}
-      className="group relative p-6 sm:p-7 rounded-3xl bg-white/95 dark:bg-espresso-card border-2 border-leaf/20 dark:border-gold/25 shadow-lg shadow-forest/5 hover:shadow-2xl hover:border-leaf transition-all duration-500 flex flex-col items-center text-center overflow-hidden hover:-translate-y-1.5"
+      className="group relative p-6 sm:p-7 rounded-3xl bg-white dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-lg shadow-forest/5 hover:shadow-2xl hover:border-[#2E7D32] transition-all duration-500 flex flex-col items-center text-center overflow-hidden hover:-translate-y-1.5"
     >
       {/* Background radial ambient glow on hover */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#B8E2BF]/20 via-transparent to-[#B8E2BF]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -89,7 +89,7 @@ export const ProgressiveMetricCard: React.FC<ProgressiveMetricProps> = ({
             cx="40"
             cy="40"
             r={radius}
-            stroke="rgba(46, 125, 50, 0.12)"
+            stroke="rgba(46, 125, 50, 0.2)"
             strokeWidth="5"
             fill="none"
           />

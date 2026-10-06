@@ -132,7 +132,7 @@ export const SignatureDishes: React.FC = () => {
           {SIGNATURES.map((dish) => (
             <div
               key={dish.id}
-              className="group w-[300px] sm:w-[350px] shrink-0 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/25 shadow-xl shadow-leaf/5 hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden hover:-translate-y-2 hover:border-leaf"
+              className="group w-[300px] sm:w-[350px] shrink-0 rounded-3xl bg-white dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-xl shadow-leaf/5 hover:shadow-2xl transition-all duration-500 flex flex-col overflow-hidden hover:-translate-y-2 hover:border-[#2E7D32]"
             >
               {/* Image Container with Zoom effect */}
               <div className="relative aspect-[4/3] overflow-hidden bg-sand/30">

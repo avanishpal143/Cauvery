@@ -165,7 +165,7 @@ export const MenuSection: React.FC = () => {
             {filteredItems.map((dish) => (
               <div
                 key={dish.id}
-                className="group p-5 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/20 shadow-md shadow-leaf/5 hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:border-leaf"
+                className="group p-5 rounded-3xl bg-white dark:bg-espresso-card border-2 border-[#2E7D32]/30 dark:border-gold/25 shadow-md shadow-leaf/5 hover:shadow-xl transition-all duration-300 flex flex-col justify-between hover:border-[#2E7D32]"
               >
                 <div>
                   {/* Top Image + Badges */}

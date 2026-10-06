@@ -71,7 +71,7 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Live Timing Status Card */}
-            <div className="p-6 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/30 shadow-md shadow-leaf/5">
+            <div className="p-6 rounded-3xl bg-white/95 dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-md shadow-leaf/5">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                   <span
@@ -102,7 +102,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Address Card */}
-            <div className="p-6 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/30 shadow-md shadow-leaf/5 space-y-4">
+            <div className="p-6 rounded-3xl bg-white/95 dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-md shadow-leaf/5 space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-chilli shrink-0 mt-1" />
                 <div>
@@ -115,7 +115,7 @@ export const ContactSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-forest/10 dark:border-cream/10 flex flex-wrap gap-3">
+              <div className="pt-3 border-t-2 border-forest/10 dark:border-cream/10 flex flex-wrap gap-3">
                 <button
                   onClick={openGoogleMaps}
                   className="flex-1 py-2.5 px-4 rounded-xl bg-gradient-to-r from-leaf to-forest hover:from-leaf-light hover:to-leaf text-cream font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all cursor-pointer shadow-sm shadow-leaf/20 border border-gold/30"
@@ -126,7 +126,7 @@ export const ContactSection: React.FC = () => {
 
                 <a
                   href="tel:+919876543210"
-                  className="py-2.5 px-4 rounded-xl bg-white dark:bg-espresso text-forest dark:text-cream font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 border border-leaf/25 dark:border-gold/25 hover:bg-leaf-tender cursor-pointer shadow-sm"
+                  className="py-2.5 px-4 rounded-xl bg-white dark:bg-espresso text-forest dark:text-cream font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 border-2 border-[#2E7D32]/30 dark:border-gold/25 hover:bg-leaf-tender cursor-pointer shadow-sm"
                 >
                   <Phone className="w-3.5 h-3.5" />
                   <span>Call Now</span>
@@ -135,7 +135,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Direct WhatsApp Concierge */}
-            <div className="p-6 rounded-3xl bg-[#25D366]/10 border border-[#25D366]/30 flex items-center justify-between gap-4">
+            <div className="p-6 rounded-3xl bg-[#25D366]/10 border-2 border-[#25D366]/40 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-md">
                   <MessageCircle className="w-5 h-5" />
@@ -165,7 +165,7 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-7 space-y-6">
             
             {/* Reservation Form */}
-            <div className="p-8 rounded-3xl bg-white/95 dark:bg-espresso-card border border-leaf/20 dark:border-gold/30 shadow-xl shadow-leaf/5">
+            <div className="p-8 rounded-3xl bg-white/95 dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-xl shadow-leaf/5">
               <div className="flex items-center gap-2 mb-2">
                 <Calendar className="w-4 h-4 text-leaf-vibrant dark:text-gold" />
                 <span className="text-xs font-bold uppercase tracking-widest text-leaf-vibrant dark:text-gold">
@@ -177,7 +177,7 @@ export const ContactSection: React.FC = () => {
               </h3>
 
               {bookingSuccess ? (
-                <div className="p-6 rounded-2xl bg-leaf-tender/90 border border-leaf/30 text-center space-y-2">
+                <div className="p-6 rounded-2xl bg-leaf-tender/90 border-2 border-leaf/40 text-center space-y-2">
                   <span className="text-2xl">🪷</span>
                   <h4 className="font-display font-bold text-lg text-forest dark:text-gold">
                     Booking Request Sent!
@@ -199,7 +199,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="e.g. Ramesh Iyer"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border-2 border-[#2E7D32]/30 dark:border-gold/30 text-forest dark:text-cream focus:outline-none focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20"
                       />
                     </div>
 
@@ -213,7 +213,7 @@ export const ContactSection: React.FC = () => {
                         placeholder="e.g. 9876543210"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border-2 border-[#2E7D32]/30 dark:border-gold/30 text-forest dark:text-cream focus:outline-none focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20"
                       />
                     </div>
                   </div>
@@ -227,7 +227,7 @@ export const ContactSection: React.FC = () => {
                         type="date"
                         value={date}
                         onChange={(e) => setDate(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border-2 border-[#2E7D32]/30 dark:border-gold/30 text-forest dark:text-cream focus:outline-none focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20"
                       />
                     </div>
 
@@ -238,7 +238,7 @@ export const ContactSection: React.FC = () => {
                       <select
                         value={time}
                         onChange={(e) => setTime(e.target.value)}
-                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
+                        className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border-2 border-[#2E7D32]/30 dark:border-gold/30 text-forest dark:text-cream focus:outline-none focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20"
                       >
                         <option value="08:00">08:00 AM (Breakfast)</option>
                         <option value="09:30">09:30 AM (Breakfast)</option>
@@ -259,7 +259,7 @@ export const ContactSection: React.FC = () => {
                         <select
                           value={guests}
                           onChange={(e) => setGuests(e.target.value)}
-                          className="w-full text-xs pl-9 pr-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
+                          className="w-full text-xs pl-9 pr-3.5 py-3 rounded-xl bg-white dark:bg-espresso border-2 border-[#2E7D32]/30 dark:border-gold/30 text-forest dark:text-cream focus:outline-none focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20"
                         >
                           <option value="1">1 Person</option>
                           <option value="2">2 Persons</option>
@@ -280,7 +280,7 @@ export const ContactSection: React.FC = () => {
                       placeholder="e.g. Birthday, Jain Food preferred, high chair needed"
                       value={occasion}
                       onChange={(e) => setOccasion(e.target.value)}
-                      className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border border-leaf/20 dark:border-gold/25 text-forest dark:text-cream focus:outline-none focus:border-leaf"
+                      className="w-full text-xs px-3.5 py-3 rounded-xl bg-white dark:bg-espresso border-2 border-[#2E7D32]/30 dark:border-gold/30 text-forest dark:text-cream focus:outline-none focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20"
                     />
                   </div>
 
@@ -296,7 +296,7 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* Embedded Google Map */}
-            <div className="relative rounded-3xl overflow-hidden shadow-xl border border-forest/10 dark:border-gold/30 aspect-[16/9] w-full">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl border-2 border-[#2E7D32]/35 dark:border-gold/30 aspect-[16/9] w-full">
               <iframe
                 title="Cauvery Cafe Location Map"
                 src="https://maps.google.com/maps?q=Bansal+Avenue+Gat+No+1624+Near+IIBM+College+Opp+Chikli+Town+Hall+Pimpri+Chinchwad+Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -316,7 +316,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* FAQ Accordion Section */}
-        <div className="max-w-3xl mx-auto pt-10 border-t border-forest/10 dark:border-cream/10">
+        <div className="max-w-3xl mx-auto pt-10 border-t-2 border-[#2E7D32]/20 dark:border-cream/10">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-1.5 text-xs uppercase font-bold tracking-widest text-leaf dark:text-gold mb-1">
               <HelpCircle className="w-4 h-4" />
@@ -333,24 +333,34 @@ export const ContactSection: React.FC = () => {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl bg-white/70 dark:bg-espresso-card border border-forest/10 dark:border-gold/20 overflow-hidden transition-all"
+                  className={`rounded-2xl bg-white dark:bg-espresso-card transition-all overflow-hidden ${
+                    isOpen
+                      ? 'border-2 border-[#2E7D32] dark:border-gold shadow-md ring-2 ring-[#2E7D32]/20'
+                      : 'border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-sm hover:border-[#2E7D32] hover:shadow-md'
+                  }`}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer"
+                    className={`w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer transition-colors ${
+                      isOpen ? 'bg-[#B8E2BF]/20 dark:bg-gold/10' : 'hover:bg-cream/40'
+                    }`}
                   >
                     <span className="font-display font-bold text-sm sm:text-base text-forest dark:text-cream">
                       {item.q}
                     </span>
-                    <ChevronDown
-                      className={`w-4 h-4 text-forest/60 dark:text-gold shrink-0 transition-transform duration-300 ${
-                        isOpen ? 'rotate-180' : ''
+                    <div
+                      className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                        isOpen
+                          ? 'bg-[#2E7D32] text-white dark:bg-gold dark:text-espresso rotate-180'
+                          : 'bg-[#B8E2BF]/50 text-forest dark:bg-gold/20 dark:text-gold'
                       }`}
-                    />
+                    >
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm font-body text-forest/75 dark:text-cream/75 leading-relaxed border-t border-forest/5 dark:border-cream/5">
+                    <div className="px-5 pb-5 pt-3 text-xs sm:text-sm font-body text-forest/85 dark:text-cream/85 leading-relaxed border-t-2 border-[#2E7D32]/15 dark:border-gold/15 bg-[#B8E2BF]/10 dark:bg-espresso/50">
                       {item.a}
                     </div>
                   )}

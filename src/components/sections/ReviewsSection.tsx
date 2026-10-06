@@ -35,9 +35,9 @@ export const ReviewsSection: React.FC = () => {
           </div>
 
           {/* Big Google Rating Badge */}
-          <div className="p-6 rounded-3xl bg-white/90 dark:bg-espresso-card border border-forest/10 dark:border-gold/30 shadow-xl flex items-center gap-6 shrink-0">
+          <div className="p-6 rounded-3xl bg-white dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-xl flex items-center gap-6 shrink-0">
             {/* Google G icon */}
-            <div className="w-14 h-14 rounded-2xl bg-forest/5 dark:bg-cream/5 flex items-center justify-center font-bold text-2xl text-forest dark:text-cream">
+            <div className="w-14 h-14 rounded-2xl bg-forest/5 dark:bg-cream/5 border border-forest/10 flex items-center justify-center font-bold text-2xl text-forest dark:text-cream">
               G
             </div>
 
@@ -64,7 +64,7 @@ export const ReviewsSection: React.FC = () => {
 
         {/* Carousel Card Container */}
         <div className="max-w-4xl mx-auto relative">
-          <div className="p-8 sm:p-12 rounded-3xl bg-white/80 dark:bg-espresso-card border border-forest/10 dark:border-gold/30 shadow-2xl relative overflow-hidden">
+          <div className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-espresso-card border-2 border-[#2E7D32]/35 dark:border-gold/30 shadow-2xl relative overflow-hidden">
             {/* Ambient water quote icon */}
             <MessageSquareQuote className="absolute top-6 right-6 w-20 h-20 text-gold/15 -z-0 pointer-events-none" />
 
@@ -82,7 +82,7 @@ export const ReviewsSection: React.FC = () => {
               </p>
 
               {/* Reviewer Bio */}
-              <div className="flex items-center justify-between pt-4 border-t border-forest/10 dark:border-cream/10">
+              <div className="flex items-center justify-between pt-4 border-t-2 border-forest/10 dark:border-cream/10">
                 <div className="flex items-center gap-3">
                   <img
                     src={reviews[currentIndex].avatar}
@@ -104,14 +104,14 @@ export const ReviewsSection: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <button
                     onClick={() => setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length)}
-                    className="p-2 rounded-full border border-forest/15 dark:border-gold/20 hover:bg-forest hover:text-cream dark:hover:bg-gold dark:hover:text-forest transition-colors cursor-pointer"
+                    className="p-2.5 rounded-full border-2 border-[#2E7D32]/35 dark:border-gold/25 hover:bg-forest hover:text-cream dark:hover:bg-gold dark:hover:text-forest transition-colors cursor-pointer"
                     aria-label="Previous review"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
                   <button
                     onClick={() => setCurrentIndex((prev) => (prev + 1) % reviews.length)}
-                    className="p-2 rounded-full border border-forest/15 dark:border-gold/20 hover:bg-forest hover:text-cream dark:hover:bg-gold dark:hover:text-forest transition-colors cursor-pointer"
+                    className="p-2.5 rounded-full border-2 border-[#2E7D32]/35 dark:border-gold/25 hover:bg-forest hover:text-cream dark:hover:bg-gold dark:hover:text-forest transition-colors cursor-pointer"
                     aria-label="Next review"
                   >
                     <ChevronRight className="w-4 h-4" />

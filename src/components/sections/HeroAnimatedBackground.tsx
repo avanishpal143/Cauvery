@@ -3,13 +3,25 @@ import React from 'react';
 export const HeroAnimatedBackground: React.FC = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
-      {/* 1. Warm Golden & Botanical Ambient Radial Gradients (Navbar Green + Logo Gold) */}
-      <div className="absolute top-12 left-1/4 w-[38rem] h-[38rem] bg-[#B8E2BF]/35 dark:bg-emerald-600/12 rounded-full blur-[110px] animate-pulse" style={{ animationDuration: '8s' }} />
-      <div className="absolute bottom-10 right-1/4 w-[34rem] h-[34rem] bg-gold/15 dark:bg-gold/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '10s' }} />
-      <div className="absolute top-1/2 -right-20 w-[30rem] h-[30rem] bg-[#B8E2BF]/25 dark:bg-leaf/10 rounded-full blur-[90px]" />
+      {/* 1. Authentic High-Res Banana Leaf & South Indian Culinary Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/hero-banana-leaf-bg.jpg"
+          alt="Fresh Banana Leaf Backdrop"
+          className="w-full h-full object-cover opacity-25 dark:opacity-15 mix-blend-multiply transition-opacity duration-700"
+        />
+        {/* Soft atmospheric gradient wash across the background to eliminate sterile white */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#B8E2BF]/35 via-[#E8F5EB]/60 to-[#FCFAF6] dark:from-espresso/80 dark:via-espresso/90 dark:to-espresso mix-blend-normal" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#B8E2BF]/30 via-transparent to-transparent pointer-events-none" />
+      </div>
 
-      {/* 2. Traditional South Indian Kolam / Mandala Sacred Geometry (Slow Rotating Heritage Backdrop) */}
-      <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[580px] h-[580px] opacity-[0.06] dark:opacity-[0.08] transition-opacity">
+      {/* 2. Warm Golden & Botanical Ambient Radial Gradients (Navbar Green + Logo Gold) */}
+      <div className="absolute top-12 left-1/4 w-[38rem] h-[38rem] bg-[#B8E2BF]/40 dark:bg-emerald-600/12 rounded-full blur-[110px] animate-pulse" style={{ animationDuration: '8s' }} />
+      <div className="absolute bottom-10 right-1/4 w-[34rem] h-[34rem] bg-gold/18 dark:bg-gold/10 rounded-full blur-[100px] animate-pulse" style={{ animationDuration: '10s' }} />
+      <div className="absolute top-1/2 -right-20 w-[30rem] h-[30rem] bg-[#B8E2BF]/30 dark:bg-leaf/10 rounded-full blur-[90px]" />
+
+      {/* 3. Traditional South Indian Kolam / Mandala Sacred Geometry (Slow Rotating Heritage Backdrop) */}
+      <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[580px] h-[580px] opacity-[0.07] dark:opacity-[0.09] transition-opacity">
         <svg
           viewBox="0 0 400 400"
           className="w-full h-full animate-spin-slow text-forest dark:text-gold"

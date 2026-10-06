@@ -12,7 +12,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onExploreMenu, onBookT
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-24 pb-12 sm:pb-20 overflow-hidden"
+      className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-24 pb-12 sm:pb-20 overflow-hidden bg-gradient-to-b from-[#B8E2BF]/30 via-[#FCFAF6] to-[#B8E2BF]/15"
     >
       {/* Animated South Indian Cafe Background with floating elements, Kolam geometry, and warm bokeh */}
       <HeroAnimatedBackground />

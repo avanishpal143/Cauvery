@@ -47,9 +47,9 @@ export const HeroAnimatedBackground: React.FC = () => {
 
       {/* 3. Floating South Indian Cafe Elements (Dosa, Idli, Curry Leaves, Filter Coffee, Spices) */}
 
-      {/* Element 1: Golden Rolled Dosa Motif (Top Right) */}
+      {/* Element 1: Golden Rolled Dosa Motif (Top Right Corner - comfortably below navbar) */}
       <div
-        className="absolute top-24 right-[8%] sm:right-[15%] hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 dark:bg-white/5 border border-gold/30 backdrop-blur-md shadow-sm opacity-85 transition-all"
+        className="absolute top-36 right-[4%] sm:right-[7%] hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/75 dark:bg-white/5 border border-gold/30 backdrop-blur-md shadow-xs opacity-85 transition-all"
         style={{
           animation: 'floatSlow 7s ease-in-out infinite',
         }}
@@ -65,7 +65,7 @@ export const HeroAnimatedBackground: React.FC = () => {
 
       {/* Element 2: Jasmine-soft Malli-Poo Idli Motif (Bottom Left) */}
       <div
-        className="absolute bottom-28 left-[6%] sm:left-[10%] hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 dark:bg-white/5 border border-leaf/30 backdrop-blur-md shadow-sm opacity-85 transition-all"
+        className="absolute bottom-20 left-[3%] sm:left-[5%] hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/75 dark:bg-white/5 border border-leaf/30 backdrop-blur-md shadow-xs opacity-85 transition-all"
         style={{
           animation: 'floatSlow 8.5s ease-in-out infinite 1.5s',
         }}
@@ -81,9 +81,9 @@ export const HeroAnimatedBackground: React.FC = () => {
         </div>
       </div>
 
-      {/* Element 3: Degree Filter Kaapi Tumbler (Top Left) */}
+      {/* Element 3: Degree Filter Kaapi Tumbler (Top Left Corner - gracefully below navbar) */}
       <div
-        className="absolute top-36 left-[3%] sm:left-[5%] hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 dark:bg-white/5 border border-copper/30 backdrop-blur-md shadow-sm opacity-80 transition-all"
+        className="absolute top-40 left-[2.5%] sm:left-[4%] hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/75 dark:bg-white/5 border border-copper/30 backdrop-blur-md shadow-xs opacity-80 transition-all"
         style={{
           animation: 'floatSlow 6.5s ease-in-out infinite 0.8s',
         }}

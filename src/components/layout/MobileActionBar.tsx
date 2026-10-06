@@ -26,6 +26,15 @@ export const MobileActionBar: React.FC<MobileActionBarProps> = ({ onMenuClick })
   return (
     <div className="fixed bottom-0 inset-x-0 z-40 lg:hidden p-3 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md border-t border-leaf/20 dark:border-gold/30 shadow-[0_-5px_25px_rgba(13,53,29,0.12)]">
       <div className="grid grid-cols-4 gap-2">
+        {/* WhatsApp Chat (Leftmost) */}
+        <button
+          onClick={handleWhatsApp}
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-[#25D366]/15 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform cursor-pointer border border-[#25D366]/25 dark:border-transparent"
+        >
+          <MessageCircle className="w-4 h-4 text-[#25D366] mb-1" />
+          <span className="text-[10px] font-bold tracking-tight">WhatsApp</span>
+        </button>
+
         {/* Call Now */}
         <a
           href="tel:+919876543210"
@@ -34,15 +43,6 @@ export const MobileActionBar: React.FC<MobileActionBarProps> = ({ onMenuClick })
           <Phone className="w-4 h-4 text-leaf-vibrant dark:text-gold mb-1" />
           <span className="text-[10px] font-bold tracking-tight">Call</span>
         </a>
-
-        {/* WhatsApp Chat */}
-        <button
-          onClick={handleWhatsApp}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-[#25D366]/15 dark:bg-cream/5 active:scale-95 text-forest dark:text-cream transition-transform cursor-pointer border border-[#25D366]/25 dark:border-transparent"
-        >
-          <MessageCircle className="w-4 h-4 text-[#25D366] mb-1" />
-          <span className="text-[10px] font-bold tracking-tight">WhatsApp</span>
-        </button>
 
         {/* Directions */}
         <button

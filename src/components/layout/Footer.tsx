@@ -38,6 +38,17 @@ export const Footer: React.FC = () => {
 
               <div className="flex items-center gap-2 pt-0.5">
                 <a
+                  href="https://wa.me/919876543210?text=Namaskara%20Cauvery%20Cafe!%20I%20would%20like%20to%20inquire%20about%20today's%20menu%20specials."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:bg-[#1EBE5D] transition-all shadow-xs hover:scale-110"
+                  aria-label="WhatsApp"
+                >
+                  <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.044.072.044.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.571 4.184 1.572 5.938l-1.669 6.096 6.275-1.644c1.701.929 3.652 1.458 5.731 1.458 6.627 0 12-5.373 12-12s-5.373-12-12-12zm0 21.6c-1.895 0-3.662-.519-5.181-1.42l-.372-.221-3.849 1.01 1.028-3.753-.243-.386c-.995-1.583-1.523-3.431-1.523-5.33 0-5.293 4.307-9.6 9.6-9.6s9.6 4.307 9.6 9.6c0 5.294-4.307 9.6-9.6 9.6z" />
+                  </svg>
+                </a>
+                <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noreferrer"
@@ -120,24 +131,40 @@ export const Footer: React.FC = () => {
 
           </div>
 
-          {/* Bottom Bar: Copyright & Scroll to Top */}
-          <div className="pt-3.5 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] sm:text-xs text-forest/75 font-medium">
-            <div className="flex items-center gap-1.5">
-              <span>Made with</span>
-              <Heart className="w-3.5 h-3.5 text-chilli fill-chilli" />
-              <span>in Pune • 100% Pure Vegetarian</span>
+          {/* Bottom Bar: WhatsApp on Left, Copyright, Go to Top on Right */}
+          <div className="pt-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-forest/75 font-medium">
+            {/* LEFT: WhatsApp Quick Action + Pure Veg Badge */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://wa.me/919876543210?text=Namaskara%20Cauvery%20Cafe!%20I%20would%20like%20to%20inquire%20about%20today's%20menu%20specials."
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#25D366] text-white hover:bg-[#1EBE5D] transition-all font-bold text-xs shadow-xs hover:scale-105"
+              >
+                <svg className="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.073.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.086s1.011.477 1.184.564.289.13.332.203c.044.072.044.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.158.571 4.184 1.572 5.938l-1.669 6.096 6.275-1.644c1.701.929 3.652 1.458 5.731 1.458 6.627 0 12-5.373 12-12s-5.373-12-12-12zm0 21.6c-1.895 0-3.662-.519-5.181-1.42l-.372-.221-3.849 1.01 1.028-3.753-.243-.386c-.995-1.583-1.523-3.431-1.523-5.33 0-5.293 4.307-9.6 9.6-9.6s9.6 4.307 9.6 9.6c0 5.294-4.307 9.6-9.6 9.6z" />
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+              <div className="flex items-center gap-1.5">
+                <span>Made with</span>
+                <Heart className="w-3.5 h-3.5 text-chilli fill-chilli" />
+                <span>in Pune • 100% Pure Veg</span>
+              </div>
             </div>
 
+            {/* CENTER: Copyright */}
             <p className="text-center">
               © {new Date().getFullYear()} Cauvery Cafe. FSSAI Certified.
             </p>
 
+            {/* RIGHT: Go to top Button */}
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/85 border border-[#2E7D32]/30 text-forest hover:bg-forest hover:text-cream transition-all cursor-pointer font-bold shadow-xs text-xs hover:scale-105"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-forest text-gold border border-gold/40 hover:bg-forest-dark transition-all cursor-pointer font-bold shadow-xs text-xs hover:scale-105"
             >
-              <span>Back to top</span>
-              <ArrowUp className="w-3 h-3" />
+              <span>Go to top</span>
+              <ArrowUp className="w-3.5 h-3.5 text-gold" />
             </button>
           </div>
 

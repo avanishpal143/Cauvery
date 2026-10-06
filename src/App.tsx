@@ -18,6 +18,7 @@ import { ContactSection } from './components/sections/ContactSection';
 import { Footer } from './components/layout/Footer';
 import { MobileActionBar } from './components/layout/MobileActionBar';
 import { CartDrawer } from './components/cart/CartDrawer';
+import { FloatingActions } from './components/ui/FloatingActions';
 
 export function App() {
   const [loading, setLoading] = useState(true);
@@ -105,6 +106,9 @@ export function App() {
 
           {/* Footer */}
           <Footer />
+
+          {/* Floating Action Buttons: WhatsApp on Left, Go To Top on Right */}
+          <FloatingActions />
 
           {/* Mobile Bottom Sticky Action Bar */}
           <MobileActionBar onMenuClick={handleScrollToMenu} />

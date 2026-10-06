@@ -1,20 +1,8 @@
-import { useState } from 'react';
+import React from 'react';
 import { CauveryLogo } from '../brand/CauveryLogo';
-import { ArrowUp, Send, Heart } from 'lucide-react';
+import { ArrowUp, Heart, Phone, Calendar } from 'lucide-react';
 
 export const Footer: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 4000);
-    }
-  };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -116,40 +104,31 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Col 4: Newsletter & Secret Menu Drop (3 cols) */}
+          {/* Col 4: Quick Order & Table Reservation (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-xs uppercase font-extrabold tracking-widest text-forest mb-2">
-              Secret Specials
+              Order &amp; Reserve
             </h4>
             <p className="text-xs text-forest/80 leading-relaxed font-medium">
-              Get notified when seasonal delicacies (e.g. Jackfruit Idli, Mango Sheera) drop!
+              Craving hot crispy dosas or steaming idlis? Call directly or reserve your table.
             </p>
 
-            <form onSubmit={handleSubscribe} className="space-y-2 pt-1">
-              <div className="relative">
-                <input
-                  type="email"
-                  required
-                  placeholder="Enter email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full text-xs px-3.5 py-2.5 rounded-xl bg-white/90 border border-[#2E7D32]/30 text-forest placeholder-forest/50 focus:outline-none focus:border-forest shadow-xs"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-1.5 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-forest text-gold hover:bg-forest-dark transition-colors cursor-pointer"
-                  aria-label="Subscribe"
-                >
-                  <Send className="w-3.5 h-3.5" />
-                </button>
-              </div>
-
-              {subscribed && (
-                <p className="text-[11px] text-leaf font-bold">
-                  ✓ You're in! Welcome to Cauvery Patrons Club.
-                </p>
-              )}
-            </form>
+            <div className="flex flex-col gap-2 pt-1">
+              <a
+                href="tel:+919876543210"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-forest text-gold hover:bg-forest-dark transition-all text-xs font-bold shadow-xs hover:shadow-md"
+              >
+                <Phone className="w-3.5 h-3.5 text-gold" />
+                <span>Call +91 98765 43210</span>
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white/85 border border-[#2E7D32]/30 text-forest hover:bg-white transition-all text-xs font-extrabold shadow-xs"
+              >
+                <Calendar className="w-3.5 h-3.5 text-leaf" />
+                <span>Book Table Online</span>
+              </a>
+            </div>
           </div>
 
         </div>

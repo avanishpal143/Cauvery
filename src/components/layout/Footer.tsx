@@ -20,20 +20,21 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-forest-dark text-cream relative pt-20 pb-28 lg:pb-16 overflow-hidden border-t border-gold/30 select-none">
-      {/* Background radial glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] bg-gold/5 rounded-full blur-3xl pointer-events-none" />
+    <footer className="bg-[#B8E2BF] text-forest relative pt-16 pb-28 lg:pb-14 overflow-hidden border-t-2 border-[#2E7D32]/30 shadow-2xl select-none">
+      {/* Background ambient botanical aura matching navbar */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[42rem] h-[22rem] bg-white/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-10 w-80 h-80 bg-gold/15 rounded-full blur-2xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main 4-Column Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-[#2E7D32]/25">
           
           {/* Col 1: Big Wordmark & Brand Personality (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <CauveryLogo variant="footer" isLightText={true} animated={true} />
+            <CauveryLogo variant="footer" animated={true} />
             
-            <p className="font-body text-xs sm:text-sm text-cream/80 max-w-sm leading-relaxed mt-4">
+            <p className="font-body text-xs sm:text-sm text-forest/85 max-w-sm leading-relaxed mt-4 font-medium">
               Celebrating the golden crispness of slow-fermented dosas, jasmine-soft idlis, and brass-tumbler degree filter kaapi in the heart of Pimpri Chinchwad, Pune.
             </p>
 
@@ -42,7 +43,7 @@ export const Footer: React.FC = () => {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-gold/30 flex items-center justify-center text-cream/80 hover:text-gold hover:border-gold transition-colors"
+                className="w-9 h-9 rounded-full bg-white/80 border border-[#2E7D32]/30 flex items-center justify-center text-forest hover:bg-forest hover:text-cream transition-all shadow-xs hover:scale-105"
                 aria-label="Instagram"
               >
                 <svg className="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
@@ -53,7 +54,7 @@ export const Footer: React.FC = () => {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-gold/30 flex items-center justify-center text-cream/80 hover:text-gold hover:border-gold transition-colors"
+                className="w-9 h-9 rounded-full bg-white/80 border border-[#2E7D32]/30 flex items-center justify-center text-forest hover:bg-forest hover:text-cream transition-all shadow-xs hover:scale-105"
                 aria-label="Facebook"
               >
                 <svg className="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
@@ -64,7 +65,7 @@ export const Footer: React.FC = () => {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-white/5 border border-gold/30 flex items-center justify-center text-cream/80 hover:text-gold hover:border-gold transition-colors"
+                className="w-9 h-9 rounded-full bg-white/80 border border-[#2E7D32]/30 flex items-center justify-center text-forest hover:bg-forest hover:text-cream transition-all shadow-xs hover:scale-105"
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4 fill-currentColor" viewBox="0 0 24 24">
@@ -76,40 +77,40 @@ export const Footer: React.FC = () => {
 
           {/* Col 2: Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-widest text-gold mb-3">
+            <h4 className="text-xs uppercase font-extrabold tracking-widest text-forest mb-3">
               Explore
             </h4>
-            <ul className="space-y-2 text-xs text-cream/70 font-medium">
+            <ul className="space-y-2 text-xs text-forest/80 font-semibold">
               <li>
-                <a href="#hero" className="hover:text-gold transition-colors">Home</a>
+                <a href="#hero" className="hover:text-leaf-vibrant transition-colors">Home</a>
               </li>
               <li>
-                <a href="#story" className="hover:text-gold transition-colors">Our Story &amp; Craft</a>
+                <a href="#story" className="hover:text-leaf-vibrant transition-colors">Our Story &amp; Craft</a>
               </li>
               <li>
-                <a href="#signatures" className="hover:text-gold transition-colors">Signature Dishes</a>
+                <a href="#signatures" className="hover:text-leaf-vibrant transition-colors">Signature Dishes</a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-gold transition-colors">Full Delicacies Menu</a>
+                <a href="#menu" className="hover:text-leaf-vibrant transition-colors">Full Delicacies Menu</a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-gold transition-colors">Cafe Ambience</a>
+                <a href="#gallery" className="hover:text-leaf-vibrant transition-colors">Cafe Ambience</a>
               </li>
               <li>
-                <a href="#reviews" className="hover:text-gold transition-colors">Patron Reviews</a>
+                <a href="#reviews" className="hover:text-leaf-vibrant transition-colors">Patron Reviews</a>
               </li>
             </ul>
           </div>
 
           {/* Col 3: Visit & Timings (2 cols) */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-widest text-gold mb-3">
+            <h4 className="text-xs uppercase font-extrabold tracking-widest text-forest mb-3">
               Timings &amp; Loc
             </h4>
-            <div className="space-y-2 text-xs text-cream/70">
-              <p className="font-semibold text-cream">7:00 AM – 11:00 PM</p>
-              <p className="text-[11px]">Open all 7 days a week</p>
-              <p className="pt-2 text-[11px] leading-tight text-cream/60">
+            <div className="space-y-1.5 text-xs text-forest/85">
+              <p className="font-extrabold text-forest">7:00 AM – 11:00 PM</p>
+              <p className="text-[11px] font-semibold text-leaf">Open all 7 days a week</p>
+              <p className="pt-2 text-[11px] leading-relaxed text-forest/80">
                 Bansal Avenue, Shop No. 8, Opp. Chikli Town Hall, Pimpri Chinchwad, Pune.
               </p>
             </div>
@@ -117,10 +118,10 @@ export const Footer: React.FC = () => {
 
           {/* Col 4: Newsletter & Secret Menu Drop (3 cols) */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase font-bold tracking-widest text-gold mb-2">
+            <h4 className="text-xs uppercase font-extrabold tracking-widest text-forest mb-2">
               Secret Specials
             </h4>
-            <p className="text-xs text-cream/70 leading-relaxed">
+            <p className="text-xs text-forest/80 leading-relaxed font-medium">
               Get notified when seasonal delicacies (e.g. Jackfruit Idli, Mango Sheera) drop!
             </p>
 
@@ -132,18 +133,19 @@ export const Footer: React.FC = () => {
                   placeholder="Enter email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full text-xs px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/15 text-cream placeholder-cream/40 focus:outline-none focus:border-gold"
+                  className="w-full text-xs px-3.5 py-2.5 rounded-xl bg-white/90 border border-[#2E7D32]/30 text-forest placeholder-forest/50 focus:outline-none focus:border-forest shadow-xs"
                 />
                 <button
                   type="submit"
-                  className="absolute right-1.5 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-gold text-forest hover:bg-gold-light transition-colors cursor-pointer"
+                  className="absolute right-1.5 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-forest text-gold hover:bg-forest-dark transition-colors cursor-pointer"
+                  aria-label="Subscribe"
                 >
                   <Send className="w-3.5 h-3.5" />
                 </button>
               </div>
 
               {subscribed && (
-                <p className="text-[11px] text-emerald-400 font-bold">
+                <p className="text-[11px] text-leaf font-bold">
                   ✓ You're in! Welcome to Cauvery Patrons Club.
                 </p>
               )}
@@ -153,7 +155,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar: Copyright & Scroll to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream/50">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-forest/75 font-medium">
           <div className="flex items-center gap-1.5">
             <span>Made with</span>
             <Heart className="w-3.5 h-3.5 text-chilli fill-chilli" />
@@ -166,7 +168,7 @@ export const Footer: React.FC = () => {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/30 text-gold hover:bg-gold hover:text-forest transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#2E7D32]/30 text-forest hover:bg-forest hover:text-cream transition-colors cursor-pointer font-bold shadow-xs"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />

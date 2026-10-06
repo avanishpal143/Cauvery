@@ -60,22 +60,25 @@ export const MenuSection: React.FC = () => {
 
         {/* Search Bar & Fast Filters */}
         <div className="max-w-3xl mx-auto mb-8 space-y-4">
-          {/* Search Box */}
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-forest/40 dark:text-cream/40" />
+          {/* Search Box with Brand Tender Green Color */}
+          <div className="relative group">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-forest text-gold flex items-center justify-center shadow-xs group-focus-within:scale-105 transition-transform">
+              <Search className="w-4 h-4 text-gold" />
+            </div>
             <input
               type="text"
               placeholder="Search crispy dosas, steamed idlis, filter kaapi, jain..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/95 dark:bg-espresso-card border border-leaf/25 dark:border-gold/25 text-sm text-forest dark:text-cream placeholder-forest/40 dark:placeholder-cream/40 shadow-sm focus:outline-none focus:border-leaf focus:ring-2 focus:ring-leaf/20"
+              className="w-full pl-13 pr-10 py-3.5 rounded-full bg-gradient-to-r from-[#B8E2BF]/85 via-[#AEE0B7]/75 to-[#C7ECD0]/80 dark:bg-espresso-card border-2 border-[#2E7D32]/45 dark:border-gold/30 text-sm font-semibold text-forest dark:text-cream placeholder-forest/65 dark:placeholder-cream/50 shadow-md shadow-[#2E7D32]/15 focus:outline-none focus:bg-white dark:focus:bg-espresso focus:border-[#2E7D32] focus:ring-4 focus:ring-[#B8E2BF]/60 transition-all"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-forest/40 hover:text-forest dark:hover:text-cream"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-forest/20 hover:bg-forest/30 flex items-center justify-center text-forest dark:text-cream transition-colors cursor-pointer"
+                aria-label="Clear search"
               >
-                <X className="w-4 h-4" />
+                <X className="w-3.5 h-3.5" />
               </button>
             )}
           </div>
@@ -85,30 +88,30 @@ export const MenuSection: React.FC = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setFilterBestsellerOnly(!filterBestsellerOnly)}
-                className={`px-3.5 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer font-semibold ${
+                className={`px-4 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer font-bold ${
                   filterBestsellerOnly
-                    ? 'bg-chilli text-cream border-chilli shadow-sm'
-                    : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 border-leaf/20 dark:border-gold/20 hover:bg-leaf-tender'
+                    ? 'bg-chilli text-cream border-chilli shadow-sm scale-105'
+                    : 'bg-[#B8E2BF]/45 dark:bg-espresso-card text-forest dark:text-cream/80 border-[#2E7D32]/35 dark:border-gold/25 hover:bg-[#B8E2BF]/80 shadow-xs'
                 }`}
               >
-                <Zap className="w-3.5 h-3.5" />
+                <Zap className="w-3.5 h-3.5 text-chilli dark:text-gold" />
                 <span>Bestsellers Only</span>
               </button>
 
               <button
                 onClick={() => setFilterJainOnly(!filterJainOnly)}
-                className={`px-3.5 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer font-semibold ${
+                className={`px-4 py-1.5 rounded-full border transition-all flex items-center gap-1.5 cursor-pointer font-bold ${
                   filterJainOnly
-                    ? 'bg-leaf-vibrant text-cream border-leaf-vibrant shadow-sm shadow-leaf/20'
-                    : 'bg-white/90 dark:bg-espresso-card text-forest/80 dark:text-cream/70 border-leaf/20 dark:border-gold/20 hover:bg-leaf-tender'
+                    ? 'bg-forest text-gold border-forest shadow-sm scale-105'
+                    : 'bg-[#B8E2BF]/45 dark:bg-espresso-card text-forest dark:text-cream/80 border-[#2E7D32]/35 dark:border-gold/25 hover:bg-[#B8E2BF]/80 shadow-xs'
                 }`}
               >
-                <Check className="w-3.5 h-3.5" />
+                <Check className="w-3.5 h-3.5 text-leaf-vibrant" />
                 <span>🌿 Jain Friendly Only</span>
               </button>
             </div>
 
-            <span className="text-forest/70 dark:text-cream/60 font-medium">
+            <span className="text-forest/80 dark:text-cream/70 font-semibold text-xs">
               Showing <strong>{filteredItems.length}</strong> items
             </span>
           </div>

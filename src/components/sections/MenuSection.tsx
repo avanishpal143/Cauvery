@@ -114,9 +114,9 @@ export const MenuSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Sticky Category Tabs - properly positioned below navbar */}
-        <div className="sticky top-[4.75rem] sm:top-[5.5rem] lg:top-28 z-30 py-2.5 sm:py-3 mb-8 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md shadow-sm border-y sm:border sm:rounded-2xl border-leaf/15 dark:border-gold/15 -mx-4 px-4 sm:mx-0 sm:px-4">
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
+        {/* Category Filter Tabs - clean in-page layout, centered on desktop */}
+        <div className="relative z-10 py-2 sm:py-2.5 mb-8 bg-white/80 dark:bg-espresso-card/80 backdrop-blur-sm rounded-2xl border border-leaf/15 dark:border-gold/15 px-3 sm:px-4 shadow-xs">
+          <div className="flex items-center sm:justify-center gap-2 overflow-x-auto no-scrollbar py-1">
             {menuData.categories.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
@@ -125,8 +125,8 @@ export const MenuSection: React.FC = () => {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-gradient-to-r from-leaf to-forest text-cream dark:bg-gold dark:text-forest shadow-md shadow-leaf/20 border border-gold/30'
-                      : 'bg-[#B8E2BF]/35 dark:bg-espresso-card text-forest/90 dark:text-cream/70 hover:bg-[#B8E2BF]/75 border border-leaf/25 dark:border-gold/20 shadow-xs'
+                      ? 'bg-gradient-to-r from-leaf to-forest text-cream dark:bg-gold dark:text-forest shadow-md shadow-leaf/20 border border-gold/30 scale-105'
+                      : 'bg-[#B8E2BF]/35 dark:bg-espresso-card text-forest/90 dark:text-cream/70 hover:bg-[#B8E2BF]/75 border border-leaf/25 dark:border-gold/20 shadow-xs hover:scale-102'
                   }`}
                 >
                   {cat.name}

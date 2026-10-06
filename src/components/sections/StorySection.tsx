@@ -49,7 +49,7 @@ export const StorySection: React.FC = () => {
   ];
 
   return (
-    <section id="story" className="relative py-24 sm:py-32 overflow-hidden bg-gradient-to-b from-[#B8E2BF]/25 via-cream to-[#B8E2BF]/15 dark:bg-espresso/50">
+    <section id="story" className="scroll-mt-24 sm:scroll-mt-28 relative py-24 sm:py-32 overflow-hidden bg-gradient-to-b from-[#B8E2BF]/25 via-cream to-[#B8E2BF]/15 dark:bg-espresso/50">
       {/* Decorative leaf divider line at top */}
       <div className="leaf-vein-line mb-16" />
 

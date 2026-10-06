@@ -84,7 +84,7 @@ export const SignatureDishes: React.FC = () => {
   };
 
   return (
-    <section id="signatures" className="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-transparent via-[#B8E2BF]/15 to-transparent">
+    <section id="signatures" className="scroll-mt-24 sm:scroll-mt-28 py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-transparent via-[#B8E2BF]/15 to-transparent">
       {/* Decorative leaf vein line at top */}
       <div className="leaf-vein-line mb-16" />
 

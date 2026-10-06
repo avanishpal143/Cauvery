@@ -65,7 +65,7 @@ export const GallerySection: React.FC = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<GalleryPhoto | null>(null);
 
   return (
-    <section id="gallery" className="py-24 sm:py-32 relative">
+    <section id="gallery" className="scroll-mt-24 sm:scroll-mt-28 py-24 sm:py-32 relative">
       {/* Decorative leaf vein line at top */}
       <div className="leaf-vein-line mb-16" />
 

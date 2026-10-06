@@ -39,7 +39,7 @@ export const MenuSection: React.FC = () => {
   }, [activeCategory, searchQuery, filterJainOnly, filterBestsellerOnly]);
 
   return (
-    <section id="menu" className="py-24 sm:py-32 relative bg-sand/20 dark:bg-espresso/30">
+    <section id="menu" className="scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32 py-24 sm:py-32 relative bg-sand/20 dark:bg-espresso/30">
       {/* Decorative leaf vein line at top */}
       <div className="leaf-vein-line mb-16" />
 
@@ -114,8 +114,8 @@ export const MenuSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Sticky Category Tabs */}
-        <div className="sticky top-20 z-30 py-3 mb-8 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md -mx-4 px-4 sm:mx-0 sm:px-0">
+        {/* Sticky Category Tabs - properly positioned below navbar */}
+        <div className="sticky top-[4.75rem] sm:top-[5.5rem] lg:top-28 z-30 py-2.5 sm:py-3 mb-8 bg-cream/95 dark:bg-espresso/95 backdrop-blur-md shadow-sm border-y sm:border sm:rounded-2xl border-leaf/15 dark:border-gold/15 -mx-4 px-4 sm:mx-0 sm:px-4">
           <div className="flex items-center gap-2 overflow-x-auto no-scrollbar">
             {menuData.categories.map((cat) => {
               const isActive = activeCategory === cat.id;

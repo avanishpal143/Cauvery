@@ -14,7 +14,7 @@ export const ReviewsSection: React.FC = () => {
   }, [reviews.length]);
 
   return (
-    <section id="reviews" className="py-24 sm:py-32 relative bg-gradient-to-b from-[#B8E2BF]/20 via-cream to-[#B8E2BF]/15 dark:bg-espresso/40">
+    <section id="reviews" className="scroll-mt-24 sm:scroll-mt-28 py-24 sm:py-32 relative bg-gradient-to-b from-[#B8E2BF]/20 via-cream to-[#B8E2BF]/15 dark:bg-espresso/40">
       {/* Decorative leaf vein line at top */}
       <div className="leaf-vein-line mb-16" />
 

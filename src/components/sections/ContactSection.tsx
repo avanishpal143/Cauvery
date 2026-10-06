@@ -45,7 +45,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 relative bg-gradient-to-b from-transparent via-[#B8E2BF]/20 to-transparent">
+    <section id="contact" className="scroll-mt-24 sm:scroll-mt-28 py-24 sm:py-32 relative bg-gradient-to-b from-transparent via-[#B8E2BF]/20 to-transparent">
       {/* Decorative leaf divider line at top */}
       <div className="leaf-vein-line mb-16" />
 

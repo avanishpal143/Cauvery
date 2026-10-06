@@ -72,16 +72,17 @@ export const GallerySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/5 dark:bg-cream/5 border border-forest/15 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf dark:text-gold mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/5 dark:bg-cream/5 border-2 border-[#2E7D32]/30 dark:border-gold/30 text-xs font-bold uppercase tracking-widest text-leaf dark:text-gold mb-3">
             <Camera className="w-3.5 h-3.5" />
             <span>The Cauvery Experience</span>
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl text-forest dark:text-cream leading-tight">
             Ambience &amp; Kitchen Moments
           </h2>
-          <p className="font-body text-sm sm:text-base text-forest/70 dark:text-cream/70 mt-2">
-            A glimpse into the warmth, aroma, and camaraderie inside our cafe opposite Chikli Town Hall.
+          <p className="font-body text-sm sm:text-base text-forest/75 dark:text-cream/75 mt-3 max-w-3xl mx-auto leading-relaxed [text-wrap:balance]">
+            <span className="block md:inline">A glimpse into the warmth, aroma, and camaraderie </span>
+            <span className="block md:inline">inside our cafe opposite Chikli Town Hall.</span>
           </p>
         </div>
 
@@ -91,7 +92,7 @@ export const GallerySection: React.FC = () => {
             <div
               key={photo.id}
               onClick={() => setSelectedPhoto(photo)}
-              className={`group relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-forest/10 dark:border-gold/20 ${photo.aspect}`}
+              className={`group relative rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border-2 border-[#2E7D32]/30 dark:border-gold/30 hover:border-[#2E7D32] ${photo.aspect}`}
             >
               <img
                 src={photo.image}

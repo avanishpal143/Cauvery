@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Clock, ShieldCheck, Star, Sparkles, Flame, CheckCircle2 } from 'lucide-react';
+import { ProgressiveMetricCard } from '../ui/ProgressiveMetricCard';
 
 export const StorySection: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -198,59 +199,48 @@ export const StorySection: React.FC = () => {
 
         </div>
 
-        {/* Four Animated Key Counters */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-20">
-          <div className="p-6 rounded-2xl bg-white/70 dark:bg-espresso-card border border-forest/10 dark:border-gold/20 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center justify-center text-gold mb-2">
-              <Clock className="w-6 h-6" />
-            </div>
-            <div className="font-display font-black text-3xl sm:text-4xl text-forest dark:text-cream mb-1">
-              24<span className="text-leaf dark:text-gold">h</span>
-            </div>
-            <p className="text-xs font-bold uppercase tracking-wider text-forest/70 dark:text-cream/70">
-              Slow Fermented
-            </p>
-            <p className="text-[10px] text-forest/50 dark:text-cream/50 mt-1">Zero chemicals or soda</p>
-          </div>
+        {/* Four Progressive Animated Metrics */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mt-20">
+          <ProgressiveMetricCard
+            icon={<Clock className="w-8 h-8" />}
+            value={24}
+            suffix="h"
+            label="Slow Fermented"
+            sublabel="Zero chemicals or soda"
+            progressPercent={100}
+            colorTheme="leaf"
+          />
 
-          <div className="p-6 rounded-2xl bg-white/70 dark:bg-espresso-card border border-forest/10 dark:border-gold/20 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center justify-center text-gold mb-2">
-              <Sparkles className="w-6 h-6" />
-            </div>
-            <div className="font-display font-black text-3xl sm:text-4xl text-forest dark:text-cream mb-1">
-              20<span className="text-leaf dark:text-gold">+</span>
-            </div>
-            <p className="text-xs font-bold uppercase tracking-wider text-forest/70 dark:text-cream/70">
-              Artisanal Varieties
-            </p>
-            <p className="text-[10px] text-forest/50 dark:text-cream/50 mt-1">Dosas, Idlis &amp; Kaapi</p>
-          </div>
+          <ProgressiveMetricCard
+            icon={<Sparkles className="w-8 h-8" />}
+            value={20}
+            suffix="+"
+            label="Artisanal Varieties"
+            sublabel="Dosas, Idlis & Kaapi"
+            progressPercent={85}
+            colorTheme="gold"
+          />
 
-          <div className="p-6 rounded-2xl bg-white/70 dark:bg-espresso-card border border-forest/10 dark:border-gold/20 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center justify-center text-gold mb-2">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <div className="font-display font-black text-3xl sm:text-4xl text-forest dark:text-cream mb-1">
-              100<span className="text-leaf dark:text-gold">%</span>
-            </div>
-            <p className="text-xs font-bold uppercase tracking-wider text-forest/70 dark:text-cream/70">
-              Pure Vegetarian
-            </p>
-            <p className="text-[10px] text-forest/50 dark:text-cream/50 mt-1">Dedicated Jain options</p>
-          </div>
+          <ProgressiveMetricCard
+            icon={<ShieldCheck className="w-8 h-8" />}
+            value={100}
+            suffix="%"
+            label="Pure Vegetarian"
+            sublabel="Dedicated Jain options"
+            progressPercent={100}
+            colorTheme="leaf"
+          />
 
-          <div className="p-6 rounded-2xl bg-white/70 dark:bg-espresso-card border border-forest/10 dark:border-gold/20 text-center shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-center justify-center text-gold mb-2">
-              <Star className="w-6 h-6 fill-gold" />
-            </div>
-            <div className="font-display font-black text-3xl sm:text-4xl text-forest dark:text-cream mb-1">
-              4.9<span className="text-leaf dark:text-gold">★</span>
-            </div>
-            <p className="text-xs font-bold uppercase tracking-wider text-forest/70 dark:text-cream/70">
-              Google Rating
-            </p>
-            <p className="text-[10px] text-forest/50 dark:text-cream/50 mt-1">1,280+ authentic reviews</p>
-          </div>
+          <ProgressiveMetricCard
+            icon={<Star className="w-8 h-8 fill-current" />}
+            value={4.9}
+            decimals={1}
+            suffix="★"
+            label="Google Rating"
+            sublabel="1,280+ authentic reviews"
+            progressPercent={98}
+            colorTheme="gold"
+          />
         </div>
 
       </div>
